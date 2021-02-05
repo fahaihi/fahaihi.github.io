@@ -100,12 +100,12 @@ service-worker: true
 friends: [
     {
         title: "公众号",
-        href: "https://globien.gitee.io"
+        href: "https://mp.weixin.qq.com/s/qKvhKplqGQdcLQ5EAorDxw"
     },{
         title: "知乎",
-        href: "https://tieba.baidu.com/f?kw=%E6%A0%BC%E7%BD%97%E6%AF%94%E8%A8%80&fr=home"
+        href: "https://www.zhihu.com/people/da-zhi-87-31"
     },{
-        title: "微信",
-        href: "https://zhuanlan.zhihu.com/Artificial-International-Language"
+        title: "小猫咪",
+        href: "https://github.com/fahaihi"
     }
 ]
