@@ -17,5 +17,5 @@
 
 #### 🧑‍🎨 PMathematical Models Design for Guangxi Scientific Research Integrity System
 **2019-2020, Supported by Guangxi Science and Technology Department, ZL.19107008**
-- ``(1)`` This project focuses on the actual situation of research credit construction in Guangxi. It aims to construct a credit evaluation model for research project applicants using the Analytic Hierarchy Process (AHP). By quantifying the research integrity behaviour of project applicants, it aims to provide a reference basis for project application reviews conducted by the administrative authorities in Guangxi's science and technology sector.\newline
-- ``(2)`` The project is developed using Java programming language, Vue framework, and Spring Boot framework. As a critical participant in the project, my responsibilities include algorithm design and implementation.
+- (1) This project focuses on the actual situation of research credit construction in Guangxi. It aims to construct a credit evaluation model for research project applicants using the Analytic Hierarchy Process (AHP). By quantifying the research integrity behaviour of project applicants, it aims to provide a reference basis for project application reviews conducted by the administrative authorities in Guangxi's science and technology sector.\newline
+- (2) The project is developed using Java programming language, Vue framework, and Spring Boot framework. As a critical participant in the project, my responsibilities include algorithm design and implementation.
