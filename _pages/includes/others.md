@@ -1,8 +1,8 @@
 
 # 📖 Educations
-- *2019.06 - 2022.04*, Master, Zhejiang University, Hangzhou.
-- *2015.09 - 2019.06*, Undergraduate, Chu Kochen Honors College, Zhejiang Univeristy, Hangzhou.
-- *2012.09 - 2015.06*, Luqiao Middle School, Taizhou.
+- *2022.06 - 2026.06*, Ph.D. Nankai University, College of Computer Science, Tianjin.
+- *2019.09 - 2022.06*, M.S.  Guangxi University, School of Computer, Electronics and Information, Nanning.
+- *2015.09 - 2019.06*, B.S.  China University of Mining and Technology, School of Computer Science and Technology, Xuzhou.
 
 # 💬 Invited Talks
 - *2022.02*, Hosted MLNLP seminar \| [\[Video\]](https://www.bilibili.com/video/BV1wF411x7qh)
