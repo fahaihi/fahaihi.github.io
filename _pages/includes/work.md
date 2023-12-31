@@ -15,7 +15,7 @@
 - (1) Sensitive sequence identification is essential for information security in the era of big biological data. To accurately and efficiently identify sensitive sequences with high error rates, a parallel algorithm named CGPU-F3SR is proposed, which combines filtering and similarity calculation. 
 - (2) This project utilizes CUDA, OpenMP, Python, and C programming languages. As the project leader, I am responsible for developing the algorithm model and implementing the programming.
 
-#### 🧑‍🎨 PMathematical Models Design for Guangxi Scientific Research Integrity System
+#### 🧑‍🎨 Mathematical Models Design for Guangxi Scientific Research Integrity System
 - **2019-2020, Supported by Guangxi Science and Technology Department, ZL.19107008**
 - (1) This project focuses on the actual situation of research credit construction in Guangxi. It aims to construct a credit evaluation model for research project applicants using the Analytic Hierarchy Process (AHP). By quantifying the research integrity behaviour of project applicants, it aims to provide a reference basis for project application reviews conducted by the administrative authorities in Guangxi's science and technology sector.\newline
 - (2) The project is developed using Java programming language, Vue framework, and Spring Boot framework. As a critical participant in the project, my responsibilities include algorithm design and implementation.
