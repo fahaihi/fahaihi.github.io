@@ -1,4 +1,4 @@
-# 🎖 
+# 🎖 Honers
 - ``2023-2024``, Doctoral Graduate "GongNeng" Scholarship of Nankai University.
 - ``2022-2023``, Doctoral Graduate "GongNeng" Scholarship of Nankai University.
 - ``2021-2022``, Outstanding Graduate Student of Guangxi University.
