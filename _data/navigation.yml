@@ -3,6 +3,9 @@ main:
   - title: "About Me"
     url: "/#about-me"
 
+  - title: "Educations"
+    url: "/#-educations"
+
   - title: "News"
     url: "/#-news"
 
@@ -12,12 +15,10 @@ main:
   - title: "Honors and Awards"
     url: "/#-honors"
 
-  - title: "Educations"
-    url: "/#-educations"
 
   - title: "Competitions"
     url: "/#-educations"
 
-  - title: "Work and Project Experience"
-    url: "/#-work-and-project-experience"
+ # - title: "Work and Project Experience"
+ #   url: "/#-work-and-project-experience"
 
