@@ -5,8 +5,3 @@
 - *2019*, First Prize for Outstanding Paper at the 2019 Conference of the Guangxi Computer Society.
 - *2017*, First Prize in "Data Creation Cup" National College Student Mathematical Modeling Challenge.
 
-# 📖 Educations
-- *2022.06 - 2026.06*, Ph.D. Nankai University, College of Computer Science, Tianjin.
-- *2019.09 - 2022.06*, M.S.  Guangxi University, School of Computer, Electronics and Information, Nanning.
-- *2015.09 - 2019.06*, B.S.  China University of Mining and Technology, School of Computer Science and Technology, Xuzhou.
-

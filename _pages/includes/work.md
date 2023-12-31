@@ -1,3 +1,9 @@
+# 📖 Educations
+- *2022.06 - 2026.06*, Ph.D. Nankai University, College of Computer Science, Tianjin.
+- *2019.09 - 2022.06*, M.S.  Guangxi University, School of Computer, Electronics and Information, Nanning.
+- *2015.09 - 2019.06*, B.S.  China University of Mining and Technology, School of Computer Science and Technology, Xuzhou.
+
+
 
 # 💻 Work and Project Experience
 #### 🎙 Parallel Compression Algorithms Design for Large-Scale Genomics Sequencing Data
