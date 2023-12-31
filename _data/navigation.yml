@@ -9,14 +9,14 @@ main:
   - title: "News"
     url: "/#-news"
 
-  - title: "Publications"
-    url: "/#-selected-research-papers-and-patents"
+  - title: "Papers and Patents"
+    url: "/#-papers-and-patents"
 
-  - title: "Honors and Awards"
+  - title: "Honors"
     url: "/#-honors"
 
 
   - title: "Competitions"
-    url: "/#-educations"
+    url: "/#-competitions"
 
 
