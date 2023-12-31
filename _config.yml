@@ -9,10 +9,10 @@
 title                    : "Sun Hui (孙辉)"
 description              : "Ph.D. candidate in Nankai-Baidu Joint Lab (NBJL-BioAI-Group). Focusing on Parallel Computing, AI for Data Compression and Information Security."
 repository               : "fahaihi/fahaihi.github.io"
-google_scholar_stats_use_cdn : false #true
+google_scholar_stats_use_cdn : true
 
 # google analytics
-google_analytics_id      : # G-SWFCX99KQZ
+google_analytics_id      : G-SWFCX99KQZ
 
 # SEO Related
 google_site_verification : b_BbOIt7d513ZXYDw-YRMicO6O5tthYiouqWDdWjGTU
