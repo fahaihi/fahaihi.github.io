@@ -4,17 +4,20 @@ main:
     url: "/#about-me"
 
   - title: "News"
-    url: ""
+    url: "/#-news"
 
   - title: "Publications"
     url: "/#-selected-research-papers-and-patents"
 
   - title: "Honors and Awards"
-    url: "/#-others"
+    url: "/#-honors"
 
   - title: "Educations"
-    url: "/#-others"
+    url: "/#-educations"
+
+  - title: "Competitions"
+    url: "/#-educations"
 
   - title: "Work and Project Experience"
-    url: "/#-work"
+    url: "/#-work-and-project-experience"
 
