@@ -4,24 +4,30 @@
 My full paper list is shown at [my personal homepage](https://fahaihi.github.io).
 
 #### 🎙 Parallel and Security Data Compression
-- ``Submitted to PLOS Computational`` [PQSDC: A Novel Parallel Quality Scores Data Compressor via Sequences Partition and Run-length Prediction Mapping](https://github.com/fahaihi/PQSDC), **Hui Sun**, YingF Zheng, Haonan Xie, HuiD Ma, Meng Yan, Xiaofei Wang, Meng Yan, Cheng Zhong, Xiaoguang Liu, Gang Wang.
-- ``Accepted by DCC 2024`` [LRCB: A Comprehensive Benchmark Evaluation of Reference-free Lossless Compression Tools for Genomics Sequencing Long Reads Data](https://github.com/fahaihi/LRCB), **Hui Sun**, HuiD MA, YingF Zheng, Haonan Xie, Meng Yan, Cheng Zhong, Xiaoguang Liu, Gang Wang.
-- ``Publised by ICPADS 2024`` [SR2C: A Structurally Redundant Short Reads Collapser for Optimizing DNA Data Compression](https://github.com/fahaihi/SR2C), **Hui Sun**, HuiD MA, YingF Zheng, Haonan Xie, Xiaofei Wang, Xiaoguang Liu, Gang Wang.
+- ``Submitted to PLOS Computational`` [PQSDC: A Novel Parallel Quality Scores Data Compressor via Sequences Partition and Run-length Prediction Mapping](https://github.com/fahaihi/PQSDC), **Hui Sun**, YingF Zheng, HaoN Xie, HuiD Ma, Meng Yan, XiaoF Wang, Meng Yan, Cheng Zhong, XiaoG Liu, Gang Wang.
+- ``Accepted by DCC 2024`` [LRCB: A Comprehensive Benchmark Evaluation of Reference-free Lossless Compression Tools for Genomics Sequencing Long Reads Data](https://github.com/fahaihi/LRCB), **Hui Sun**, HuiD MA, YingF Zheng, HaoN Xie, Meng Yan, Cheng Zhong, XiaoG Liu, Gang Wang.
+- ``Published in ICPADS 2024`` [SR2C: A Structurally Redundant Short Reads Collapser for Optimizing DNA Data Compression](https://github.com/fahaihi/SR2C), **Hui Sun**, HuiD MA, YingF Zheng, HaoN Xie, XiaoF Wang, XiaoG Liu, Gang Wang.
+- ``Published in BMC Bioinformatics 2023`` [PMFFRC: a large-scale genomic short reads compression optimizer via memory modeling and redundant clustering](https://github.com/fahaihi/PMFFRC), **Hui Sun**, YingF Zheng, HaoN Xie, HuiD MA, XiaoG Liu, Gang Wang.
+- ``Published in Journal on Communications 2023`` [Parallel Algorithm for Sensitive Sequence Recognition from Long-read Genome Data with High Error Rate](https://github.com/fahaihi/SH_Code/blob/master/CV_INFO/CGPU_F3SR.pdf), Cheng Zhong, **Hui Sun**. (Corresponding Author)
+- ``Published in Journal of Chinese Computer Systems 2022`` [Recognizing Sensitive Sequences from Genomic Data with High Error Rate Integrating Filter and Similarity Calculation](https://github.com/fahaihi/SH_Code/blob/master/CV_INFO/CGPU_F3SR.pdf), **Hui Sun**, Cheng Zhong. (Corresponding Author)
 
-#### 👄 Talkingface Generation
-- ``ICLR 2023`` [GeneFace: Generalized and High-Fidelity Audio-Driven 3D Talking Face Synthesis](https://openreview.net/forum?id=YfwMIDhPccD), Zhenhui Ye, Ziyue Jiang`, **Yi Ren**, Jinglin Liu, Jinzheng He, Zhou Zhao
-- ``AAAI 2022`` [Parallel and High-Fidelity Text-to-Lip Generation](https://arxiv.org/abs/2107.06831), Jinglin Liu, Zhiying Zhu, **Yi Ren**, Wencan Huang, Baoxing Huai, Nicholas Yuan, Zhou Zhao
-- ``ACM-MM 2020`` [FastLR: Non-Autoregressive Lipreading Model with Integrate-and-Fire](https://dl.acm.org/doi/10.1145/3394171.3413740), Jinglin Liu, **Yi Ren**, Zhou Zhao, Chen Zhang, Baoxing Huai, Jing Yuan 
 
-#### 📚 Machine Translation 
-- ``ACL 2023`` [AV-TranSpeech: Audio-Visual Robust Speech-to-Speech Translation](), Rongjie Huang, Huadai Liu, Xize Cheng, **Yi Ren**, Linjun Li, Zhenhui Ye, Jinzheng He, Lichao Zhang, Jinglin Liu, Xiang Yin and Zhou Zhao
-- ``ICLR 2023`` [TranSpeech: Speech-to-Speech Translation With Bilateral Perturbation](https://openreview.net/forum?id=UVAmFAtC5ye), Rongjie Huang, Jinglin Liu, Huadai Liu, **Yi Ren**, Lichao Zhang, Jinzheng He, Zhou Zhao
-- ``ACL 2020`` [SimulSpeech: End-to-End Simultaneous Speech to Text Translation](https://www.aclweb.org/anthology/2020.acl-main.350), **Yi Ren**, Jinglin Liu, Xu Tan, Chen Zhang, Qin Tao, Zhou Zhao, Tie-Yan Liu
-- ``ICLR 2019`` [Multilingual Neural Machine Translation with Knowledge Distillation](https://openreview.net/forum?id=S1gUsoR9YX), Xu Tan, **Yi Ren**, Di He, Tao Qin, Zhou Zhao, Tie-Yan Liu
+#### 👄 Electronic Design Automation (EDA) Circuit Layout and Routing.
+- ``Accepted by Huazhong University of Science and Technology`` [A Schematic Aesthetics Evaluation Algorithm Integrating Clustering and Convolutional Neural Networks](), **Hui Sun**, HaoN Xie, Gang Wang, XingY Cui, et al.
+- ``Accepted by Huazhong University of Science and Technology`` [Heuristic Placement and Routing Algorithm for Optimizing Logical Clarity of Schematics](), XingY Cui, ZhaoP Feng, YanF Ding, **Hui Sun**, et al.
 
-#### 🎼 Music Generation 
-- ``ACM-MM 2020`` [PopMAG: Pop Music Accompaniment Generation](https://dl.acm.org/doi/10.1145/3394171.3413721), **Yi Ren**, Jinzheng He, Xu Tan, Tao Qin, Zhou Zhao, Tie-Yan Liu
+#### 📚 Other Co-authored Publications.  
+- ``Published in Energy \& Buildings 2023`` [Paving the Way for Smart Cities and a Greener Future](https://github.com/fahaihi/SH_Code/blob/master/CV_INFO/XHN_1.pdf), HaoN Xie, RenH Huang, **Hui Sun**, et al.
+- ``Published in ISBRA 2023`` [ricME: Long-read based Mobile Element Variant Detection using Sequence Realignment and Identity Calculation](https://github.com/fahaihi/SH_Code/blob/master/CV_INFO/ricME.pdf), HuiD Ma, Cheng Zhong, **Hui Sun**, et al.
+- ``Published in Journal of Guangxi University 2020`` [Credit Model and Algorithm for Multi-Dimensional Evaluating Responsible Subjects of Scientific and Technological Activities](hhttps://github.com/fahaihi/SH_Code/blob/master/CV_INFO/TYH_1.pdf), YingH Tang, Jun Liu, Ling wang, **Hui Sun**, et al.
 
-#### 🧑‍🎨 Generative Model
-- ``ICLR 2022`` [Pseudo Numerical Methods for Diffusion Models on Manifolds](https://openreview.net/forum?id=PlKWVd2yBkY), Luping Liu, **Yi Ren**, Zhijie Lin, Zhou Zhao \| [![](https://img.shields.io/github/stars/luping-liu/PNDM?style=social&label=Code+Stars)](https://github.com/luping-liu/PNDM) \| [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/pseudo-numerical-methods-for-diffusion-models-1/image-generation-on-celeba-64x64)](https://paperswithcode.com/sota/image-generation-on-celeba-64x64?p=pseudo-numerical-methods-for-diffusion-models-1)
 
+#### 🧑‍🎨 Patents and Software Copyrights
+- ``CN Patent 2023`` [A Heuristic Layout and Routing Method for Circuit Schematic Diagrams](), CN117057302A, Gang Wang (supervisor), **Hui Sun**, XiaoG Liu, et al. 
+- ``CN Patent 2023`` [ Method for Evaluating the Aesthetics Level of Circuit Layout, Routing, and Schematic Diagram](), CN117058096A, Gang Wang (supervisor), **Hui Sun**, XiaoG Liu, et al. 
+- ``CN Patent 2023`` [A Parallel Optimization Method for High-Throughput Genomics Sequencing reads Data Compression](), CN117059181A, Gang Wang (supervisor), **Hui Sun**, XiaoG Liu, et al. 
+- ``CN Patent 2023`` [A Parallel Compression Method for High-Throughput Genomic Sequencing Quality Score Data](), CN117133365A, Gang Wang (supervisor), **Hui Sun**, XiaoG Liu, et al. 
+- ``CN Patent 2022`` [A Non-Intrusive Identification Method, System, Device, and Storage Medium for Multi-Parameter Identification of Electromagnetic Equipment Based on Ensemble Algorithms](), CN113723495A, DongD Zhang, HaoN Xie, **Hui Sun**, et al. 
+- ``CN Softeware 2021`` [Research Integrity Evaluation Software System](), 2021SR06838011, Fengjiao Zhao, **Hui Sun**, Cheng Zhong, et al.
+- ``CN Softeware 2021`` [DNA Sensitive Sequence Filtering Software](), 2021SR068771, **Hui Sun**, HaoN Xie, Cheng Zhong, et al.
+- ``CN Softeware 2020`` [Improved RC4 Cryptography Auxiliary Teaching Platform](), 2020SR0283880, **Hui Sun**.
