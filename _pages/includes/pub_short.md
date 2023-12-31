@@ -1,5 +1,5 @@
 
-# 💻 Selected Research Papers
+# 💻 Selected Research Papers and Patents
 
 My full paper list is shown at [my personal homepage](https://fahaihi.github.io).
 
