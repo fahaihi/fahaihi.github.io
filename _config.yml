@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Sun Hui (孙辉)"
-description              : "Research scientist in Nankai-Baidu Joint Lab (NBJL-BioAI-Group). Focusing on Parallel Computing, AI for Data Compression and Information Security."
+description              : "Ph.D. candidate in Nankai-Baidu Joint Lab (NBJL-BioAI-Group). Focusing on Parallel Computing, AI for Data Compression and Information Security."
 repository               : "rayeren/rayeren.github.io"
 google_scholar_stats_use_cdn : false #true
 
