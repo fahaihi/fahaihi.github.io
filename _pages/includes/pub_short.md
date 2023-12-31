@@ -1,7 +1,7 @@
 
-# 💻 Selected Research Papers and Patents
+# 💻 Papers and Patents
 
-My full paper list is shown at [my personal homepage](https://fahaihi.github.io).
+My full papers and patents list are shown at [my personal homepage](https://fahaihi.github.io).
 
 #### 🎙 Parallel and Security Data Compression
 - ``2024`` [PQSDC: A Novel Parallel Quality Scores Data Compressor via Sequences Partition and Run-length Prediction Mapping](https://github.com/fahaihi/PQSDC), Submitted to PLOS Computational, **Hui Sun**, YingF Zheng, HaoN Xie, HuiD Ma, Meng Yan, XiaoF Wang, Meng Yan, Cheng Zhong, XiaoG Liu, Gang Wang.
@@ -17,7 +17,7 @@ My full paper list is shown at [my personal homepage](https://fahaihi.github.io)
 - ``2024`` [Heuristic Placement and Routing Algorithm for Optimizing Logical Clarity of Schematics](), Accepted by Huazhong University of Science and Technology, XingY Cui, ZhaoP Feng, YanF Ding, **Hui Sun**, et al.
 
 #### 📚 Other Co-authored Publications.  
-- ``2023`` [Paving the Way for Smart Cities and a Greener Future](https://github.com/fahaihi/SH_Code/blob/master/CV_INFO/XHN_1.pdf), Published in Energy \& Buildings, HaoN Xie, RenH Huang, **Hui Sun**, et al.
+- ``2023`` [Paving the Way for Smart Cities and a Greener Future](https://github.com/fahaihi/SH_Code/blob/master/CV_INFO/XHN_1.pdf), Published in Energy and Buildings, HaoN Xie, RenH Huang, **Hui Sun**, et al.
 - ``2023`` [ricME: Long-read based Mobile Element Variant Detection using Sequence Realignment and Identity Calculation](https://github.com/fahaihi/SH_Code/blob/master/CV_INFO/ricME.pdf), Published in ISBRA, HuiD Ma, Cheng Zhong, **Hui Sun**, et al.
 - ``2020`` [Credit Model and Algorithm for Multi-Dimensional Evaluating Responsible Subjects of Scientific and Technological Activities](hhttps://github.com/fahaihi/SH_Code/blob/master/CV_INFO/TYH_1.pdf), Published in Journal of Guangxi University, YingH Tang, Jun Liu, Ling wang, **Hui Sun**, et al.
 
