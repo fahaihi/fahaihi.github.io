@@ -4,7 +4,7 @@
 My full papers and patents list are shown at [my personal homepage](https://fahaihi.github.io).
 
 #### 🎙 Parallel and Security Data Compression
-- ``2024`` [PQSDC: A Novel Parallel Quality Scores Data Compressor via Sequences Partition and Run-length Prediction Mapping](https://github.com/fahaihi/PQSDC), Submitted to PLOS Computational Biology, **Hui Sun**, YingF Zheng, HaoN Xie, HuiD Ma, Meng Yan, XiaoF Wang, Meng Yan, Cheng Zhong, XiaoG Liu, Gang Wang.
+- ``2024`` [PQSDC: A Novel Parallel Quality Scores Data Compressor via Sequences Partition and Run-length Prediction Mapping](https://github.com/fahaihi/PQSDC), Submitted to Bioinformatics, **Hui Sun**, YingF Zheng, HaoN Xie, HuiD Ma, Meng Yan, XiaoF Wang, Meng Yan, Cheng Zhong, XiaoG Liu, Gang Wang.
 - ``2024`` [LRCB: A Comprehensive Benchmark Evaluation of Reference-free Lossless Compression Tools for Genomics Sequencing Long Reads Data](https://github.com/fahaihi/LRCB), Accepted by DCC 2024, **Hui Sun**, HuiD MA, YingF Zheng, HaoN Xie, Meng Yan, Cheng Zhong, XiaoG Liu, Gang Wang.
 - ``2023`` [SR2C: A Structurally Redundant Short Reads Collapser for Optimizing DNA Data Compression](https://github.com/fahaihi/SR2C), Published in ICPADS 2024, **Hui Sun**, HuiD MA, YingF Zheng, HaoN Xie, XiaoF Wang, XiaoG Liu, Gang Wang.
 - ``2023`` [PMFFRC: a large-scale genomic short reads compression optimizer via memory modeling and redundant clustering](https://github.com/fahaihi/PMFFRC), Published in BMC Bioinformatics, **Hui Sun**, YingF Zheng, HaoN Xie, HuiD MA, XiaoG Liu, Gang Wang.
