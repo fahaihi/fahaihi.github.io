@@ -5,7 +5,7 @@ My full papers and patents list are shown at [my personal homepage](https://faha
 ### (Accepted or Published Work)
 #### 🎙 Parallel and Security Data Compression 
 - ``2025`` Genomics Data Lossless Compression with (s,k)-mer Encoding and Deep Neural Networks, Aceepted by AAAI-2025 conference, CCF-A, (ranked 1st).
-- ``2023`` Parallel Algorithm for Sensitive Sequence Recognition from Long-read Genome Data with High Error Rate, Published in Journal on Communications, CCF-A Chinese, (ranked 2nd, Corresponding Author).
+- ``2023`` Parallel Algorithm for Sensitive Sequence Recognition from Long-read Genome Data with High Error Rate, Published in Journal on Communications, CCF-A Chinese, (corresponding author).
 - ``2024`` A Survey and Benchmark Evaluation for Neural-Network Based Lossless Universal Compressors Toward Multi-Source Data, Accepted by FCS journal, CCF-B, (ranked 1st).
 - ``2024`` PQSDC: A Novel Parallel Quality Scores Data Compressor via Sequences Partition and Run-length Prediction Mapping, Published in Bioinformatics, CCF-B, Top journal(ranked 1st).
 - ``2024`` LRCB: A Comprehensive Benchmark Evaluation of Reference-free Lossless Compression Tools for Genomics Sequencing Long Reads Data, Published in DCC 2024, CCF-B Poster, (ranked 1st).
