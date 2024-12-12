@@ -5,7 +5,7 @@
 - ``2025`` Genomics Data Lossless Compression with (s,k)-mer Encoding and Deep Neural Networks, Aceepted by AAAI-2025 conference, CCF-A, (ranked 1st).
 - ``2023`` Parallel Algorithm for Sensitive Sequence Recognition from Long-read Genome Data with High Error Rate, Published in Journal on Communications, CCF-A Chinese, (corresponding author).
 - ``2024`` A Survey and Benchmark Evaluation for Neural-Network Based Lossless Universal Compressors Toward Multi-Source Data, Accepted by FCS journal, CCF-B, (ranked 1st).
-- ``2024`` PQSDC: A Novel Parallel Quality Scores Data Compressor via Sequences Partition and Run-length Prediction Mapping, Published in Bioinformatics, CCF-B, Top journal(ranked 1st).
+- ``2024`` PQSDC: A Novel Parallel Quality Scores Data Compressor via Sequences Partition and Run-length Prediction Mapping, Published in Bioinformatics, CCF-B, Top journal in bioinformatics, (ranked 1st).
 - ``2024`` LRCB: A Comprehensive Benchmark Evaluation of Reference-free Lossless Compression Tools for Genomics Sequencing Long Reads Data, Published in DCC 2024, CCF-B Poster, (ranked 1st).
 - ``2022`` Recognizing Sensitive Sequences from Genomic Data with High Error Rate Integrating Filter and Similarity Calculation, Published in Journal of Chinese Computer Systems, CCF-B Chinese, (ranked 1st).
 - ``2023`` SR2C: A Structurally Redundant Short Reads Collapser for Optimizing DNA Data Compression, Published in ICPADS 2024, CCF-C, (ranked 1st).
