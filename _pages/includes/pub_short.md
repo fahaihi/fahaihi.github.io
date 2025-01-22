@@ -4,7 +4,7 @@
 My full papers and patents list are shown at [my personal homepage](https://fahaihi.github.io).
 
 #### 🎙 Parallel and Security Data Compression
-- ``2025`` Genomics Data Lossless Compression with (s,k)-mer Encoding and Deep Neural Networks, Submitted to AAAI-2024 conference, (ranked 1st).
+- ``2025`` 1Genomics Data Lossless Compression with (s,k)-mer Encoding and Deep Neural Networks, Submitted to AAAI-2024 conference, (ranked 1st).
 - ``2025`` Genomics Data Lossless Compression with (s,k)-mer Encoding and Deep Neural Networks, Submitted to AAAI-2024 conference, (ranked 1st).
 - ``2024`` A Survey and Benchmark Evaluation for Neural-Network Based Lossless Universal Compressors Toward Multi-Source Data, Submitted to FCS journal, (ranked 1st).
 - ``2024`` PQSDC: A Novel Parallel Quality Scores Data Compressor via Sequences Partition and Run-length Prediction Mapping, Published in Bioinformatics, (ranked 1st).
