@@ -1,38 +1,49 @@
+\subsection{\textbf{已发表会议及期刊论文}}
+\begin{enumerate}[{label=[\arabic{*}]},noitemsep,parsep=0.9ex]
 
-# 💻 Papers and Patents
-## (Accepted or Published Work)
-### 🎙 Parallel and Security Data Compression 
-- ``2025`` Genomics Data Lossless Compression with (s,k)-mer Encoding and Deep Neural Networks, Aceepted by AAAI-2025 conference, CCF-A, (ranked 1st).
-- ``2023`` Parallel Algorithm for Sensitive Sequence Recognition from Long-read Genome Data with High Error Rate, Published in Journal on Communications, CCF-A Chinese, (corresponding author).
-- ``2024`` A Survey and Benchmark Evaluation for Neural-Network Based Lossless Universal Compressors Toward Multi-Source Data, Accepted by FCS journal, CCF-B, (ranked 1st).
-- ``2024`` PQSDC: A Novel Parallel Quality Scores Data Compressor via Sequences Partition and Run-length Prediction Mapping, Published in Bioinformatics, CCF-B, Top journal in bioinformatics, (ranked 1st).
-- ``2024`` LRCB: A Comprehensive Benchmark Evaluation of Reference-free Lossless Compression Tools for Genomics Sequencing Long Reads Data, Published in DCC 2024, CCF-B Poster, (ranked 1st).
-- ``2022`` Recognizing Sensitive Sequences from Genomic Data with High Error Rate Integrating Filter and Similarity Calculation, Published in Journal of Chinese Computer Systems, CCF-B Chinese, (ranked 1st).
-- ``2023`` SR2C: A Structurally Redundant Short Reads Collapser for Optimizing DNA Data Compression, Published in ICPADS 2024, CCF-C, (ranked 1st).
-- ``2023`` PMFFRC: a large-scale genomic short reads compression optimizer via memory modeling and redundant clustering, Published in BMC Bioinformatics, CCF-C, (ranked 1st).
+%\datedsubsection{\textbf{第一或通讯作者：}}{}
 
-### 👄 Electronic Design Automation (EDA) Circuit Layout and Routing.
-- ``2024`` A Schematic Aesthetics Evaluation Algorithm Integrating Clustering and Convolutional Neural Networks, Published Huazhong University of Science and Technology, EI, (ranked 1st).
-- ``2024`` Heuristic Placement and Routing Algorithm for Optimizing Logical Clarity of Schematics, Published by Huazhong University of Science and Technology, EI.
+\item {\color{black}\textbf{Hui Sun}$^\dagger$, Lipng Yi$^\dagger$, Huidong Ma, Yongxia Sun, Yingfeng Zheng, Wenwen Cui, Meng Yan, Gang Wang${^*}$, Xiaoguang Liu${^*}$. Genomics data lossless compression with $(s,k)$-mer encoding and deep neural networks, Published in The 39th Annual AAAI Conference on Artificial Intelligence (AAAI), 2025, CCF-A.}
 
-### 📚 Other Co-authored Publications.  
-- ``2023`` Paving the Way for Smart Cities and a Greener Future, Published in Energy and Buildings, Top Journal, JCR-Q1 (ranked 3rd).
-- ``2023`` ricME: Long-read based Mobile Element Variant Detection using Sequence Realignment and Identity Calculation, CCF-C, (ranked 3rd).
-- ``2020`` Credit Model and Algorithm for Multi-Dimensional Evaluating Responsible Subjects of Scientific and Technological Activities, CCF-C, (ranked 4th).
-- 
-### 🧑‍🎨 Patents and Software Copyrights
-- ``2023`` A Heuristic Layout and Routing Method for Circuit Schematic Diagrams, CN Patent, CN117057302A, Gang Wang (supervisor), **Hui Sun**, XiaoG Liu, et al. 
-- ``2023`` Method for Evaluating the Aesthetics Level of Circuit Layout, Routing, and Schematic Diagram, CN Patent, CN117058096A, (ranked 2nd). 
-- ``2023`` A Parallel Optimization Method for High-Throughput Genomics Sequencing reads Data Compression, CN Patent, CN117059181A, (ranked 2nd). 
-- ``2023`` A Parallel Compression Method for High-Throughput Genomic Sequencing Quality Score Data, CN Patent, CN117133365A, (ranked 2nd). 
-- ``2022`` A Non-Intrusive Identification Method, System, Device, and Storage Medium for Multi-Parameter Identification of Electromagnetic Equipment Based on Ensemble Algorithms, CN Patent, CN113723495A, (ranked 3rd). 
-- ``2021`` Research Integrity Evaluation Software System, Software Copyrights, 2021SR06838011, (ranked 2nd).
-- ``2021`` DNA Sensitive Sequence Filtering Software, Software Copyrights, 2021SR068771, (ranked 1st).
-- ``2020`` Improved RC4 Cryptography Auxiliary Teaching Platform, Software Copyrights, 2020SR0283880, (ranked 1st).
+\item Huidong Ma$^\dagger$, \textbf{Hui Sun}$^\dagger$, Liping Yi, Yanfeng Ding, Xiaoguang Liu${^*}$, Gang Wang${^*}$. MSDZip: Universal Lossless Compression for Multi-source Data via Stepwise-parallel and Learning-based Prediction, Published in The Web Conference (WWW), 2025, CCF-A
 
-## (Under Review Work)
-- ``2025`` Parallel Multi-Knowledge Learning Lossless Compression for Large-Scale Genomics Database, Submitted to KDD-2025 conference, CCF-A, (ranked 1st).
-- ``2025`` MSDZip: Universal Lossless Compression for Multi-source Data via Stepwise-parallel and Learning-based Prediction, Submitted to WWW-2025, CCF-A, (co-first author).
-- ``2025`` Multi-source Data Lossless Compression via Parallel Expansion Mapping and xLSTM, Submitted to ICASSP-2025 conference, CCF-B, (ranked 2nd).
-- ``2025`` Adaptive Lossless Compression for Genomics Data by Multiple (s, k)-mer Encoding and XLSTM, Submitted to ICASSP-2025 conference, CCF-B, (ranked lst).
-- ``2025`` Parallel Quality Score Data Lossless Compression for Genomics Databases via Multi-Partitioning and Redundancy Encoding, submitted to DASFAA-2025, CCF-B, (ranked 1st).
+\item \textbf{Hui Sun}$^\dagger$, Yanfeng Ding$^\dagger$, Liping Yi, Huidong Ma, Haonan Xie, Gang Wang${^*}$, Xiaoguang Liu${^*}$. Adaptive lossless compression for genomics data by multiple ($s, k$)-mer encoding and xLSTM, Published in 2025 IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 2025, CCF-B.
+
+\item {\color{black}\textbf{Hui Sun}, Yingfeng Zheng, Haonan Xie, Huidong Ma, Cheng Zhong, Meng Yan$^*$, Xiaoguang Liu, Gang Wang. PQSDC: a novel parallel quality scores data compressor via sequences partition and run-length prediction mapping, Published in Bioinformatics journal, 2024, CCF-B, JCR-Q1, (领域Top期刊).
+
+\item {\color{black}\textbf{Hui Sun}$^\dagger$, {\color{black}{Huidong Ma}$^\dagger$, Feng Ling, Haonan Xie, Yongxia Sun, Liping Yi, Meng Yan$^*$
+, Cheng Zhong, Xiaoguang Liu, Gang Wang$^*$. A survey and benchmark evaluation for neural-network-based lossless universal compressors toward multi-source data, Published in FCS journal, 2024, CCF-B, JCR-Q2.
+
+
+\item \textbf{Hui Sun}$^\dagger$, Huidong Ma$^\dagger$,Yingfeng Zheng, Haonan Xie, Cheng Zhong, Xiaoguang Liu${^*}$, Gang Wang${^*}$. LRCB: A comprehensive benchmark evaluation of reference-free lossless compression tools for genomics sequencing long reads data, Published In 2024 Data Compression Conference (DCC), CCF-B, EI.
+
+
+\item {\color{black}{钟诚, \textbf{孙辉}$^*$. 高错误率长序列基因组数据敏感序列识别并行算法}, 通信学报, 2023, CCF-A, EI.}
+
+
+\item \textbf{Hui Sun}$^\dagger$, Huidong Ma$^\dagger$, Yingfeng Zheng, Haonan Xie, Xiaofei Wang, Xiaoguang Liu$^*$, Gang Wang$^*$. SR2C: A structurally redundant short reads collapser for optimizing DNA data compression, Published in 2023 IEEE 29th International Conference on Parallel and Distributed Systems (ICPADS), CCF-C.
+
+
+\item \textbf{Hui Sun}, Yingfeng Zheng, Haonan Xie, Huidong Ma, Xiaoguang Liu$^*$, Gang Wang$^*$. PMFFRC: a large-scale genomic short reads compression optimizer via memory modeling and redundant clustering, Published in BMC Bioinformatics journal, 2023, CCF-C, JCR-Q2.
+
+
+\item  \textbf{孙辉}， 丁延锋，王刚$^*$， 李桢荣. 融合聚类和卷积神经网络的原理图美观度评价算法, 华中科技大学学报, 2024, EI.
+\item \textbf{孙辉}, 钟诚$^*$. 融合过滤和相似度计算的高错误率基因组数据敏感序列识别, 小型微型计算机系统, 2022, CCF-B.
+
+
+
+%\item Parallel lossless compression for quality score data with sequence multi-partitioning and redundancy encoding, Subbmited to DASFAA-2025 conference, CCF-B, (第一作者, 审稿中), [\href{https://github.com/fahaihi/PQSDC2}{\textcolor{blue}{Linkage}}]
+
+%\datedsubsection{\textbf{其它主要贡献论文：}}{}
+\item Huidong Ma, \textbf{Hui Sun}, Liping Yi, Gang Wang$^*$, Xiaoguang Liu$^*$. Multi-source data lossless compression via parallel expansion mapping and xLSTM, Published in 2025 IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 2025, CCF-B.
+
+
+
+\item Huidong Ma, Cheng Zhong$^*$, \textbf{Hui Sun}, Danyang Chen, Haixiang Lin. ricME: long-read based mobile element variant detection using sequence realignment and identity calculation, Published International Symposium on Bioinformatics Research and Applications (ISBRA), 2023, CCF-C.
+
+\item Haonan Xie, Renhao Huang, \textbf{Hui Sun}, Zepeng Han, Meihui Jiang, Dongdong Zhang$^*$, Hui Hwang Goh$^*$, Tonni Agustiono Kurniawan, Fei Han, Hui Liu, Thomas Wu. Wireless energy: Paving the way for smart cities and a greener future, Energy and Buildings, 2023, JCR-Q1.
+
+\item Haonan Xie, Hui Hwang Goh$^*$, Dongdong Zhang$^*$, \textbf{Hui Sun}, Wei Dai, Tonni Agustiono Kurniawan, Dennis WL Wong, Kenneth Tze Kin Teo, Kai Chen Goh. Eco-Energetical analysis of circular economy and community-based virtual power plants (CE-cVPP): A systems engineering-engaged life cycle assessment (SE-LCA) method for sustainable renewable energy development, Applied Energy, 2024, JCR-Q1. 
+
+\item 唐印浒, 刘峻$^*$, 王淋, \textbf{孙辉}, 赵凤娇, 钟诚. 多维度评价科技工作责任主体信用模型与算法, 广西大学学报, 2021, CSCD核心. 
+\end{enumerate}
