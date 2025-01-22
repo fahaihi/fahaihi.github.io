@@ -4,6 +4,19 @@
 My full papers and patents list are shown at [my personal homepage](https://fahaihi.github.io).
 
 #### 🎙 Accepted Conference or Journal Papers
+[16] **Hui Sun**$^\dagger$, Lipng Yi$^\dagger$, Huidong Ma, Yongxia Sun, Yingfeng Zheng, Wenwen Cui, Meng Yan, Gang Wang$^{\star}$, Xiaoguang Liu$^{\star}$. Genomics data lossless compression with $(s,k)$-mer encoding and deep neural networks, Published in The 39th Annual AAAI Conference on Artificial Intelligence (AAAI), 2025, CCF-A.
+
+[15] Huidong Ma$^\dagger$, **Hui Sun**$^\dagger$, Liping Yi, Yanfeng Ding, Xiaoguang Liu$^{\star}$, Gang Wang$^{\star}$. MSDZip: Universal Lossless Compression for Multi-source Data via Stepwise-parallel and Learning-based Prediction, Published in The Web Conference (WWW), 2025, CCF-A
+
+[14] **Hui Sun**$^\dagger$, Yanfeng Ding$^\dagger$, Liping Yi, Huidong Ma, Haonan Xie, Gang Wang$^{\star}$, Xiaoguang Liu$^{\star}$. Adaptive lossless compression for genomics data by multiple ($s, k$)-mer encoding and xLSTM, Published in 2025 IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 2025, CCF-B.
+
+[13] **Hui Sun**, Yingfeng Zheng, Haonan Xie, Huidong Ma, Cheng Zhong, Meng Yan$^{\star}$, Xiaoguang Liu, Gang Wang. PQSDC: a novel parallel quality scores data compressor via sequences partition and run-length prediction mapping, Published in Bioinformatics journal, 2024, CCF-B, JCR-Q1, (领域Top期刊).
+
+[12] **Hui Sun**$^\dagger$, Huidong Ma$^\dagger$, Feng Ling, Haonan Xie, Yongxia Sun, Liping Yi, Meng Yan$^{\star}$
+, Cheng Zhong, Xiaoguang Liu, Gang Wang$^{\star}$. A survey and benchmark evaluation for neural-network-based lossless universal compressors toward multi-source data, Published in FCS journal, 2024, CCF-B, JCR-Q2.
+
+[11] **Hui Sun**$^\dagger$, Huidong Ma$^\dagger$,Yingfeng Zheng, Haonan Xie, Cheng Zhong, Xiaoguang Liu$^{\star}$, Gang Wang$^{\star}$. LRCB: A comprehensive benchmark evaluation of reference-free lossless compression tools for genomics sequencing long reads data, Published In 2024 Data Compression Conference (DCC), CCF-B, EI.
+
 [10] 钟诚, **孙辉**$^{\star}$. 高错误率长序列基因组数据敏感序列识别并行算法, 通信学报, 2023, CCF-A, EI.}
 
 
