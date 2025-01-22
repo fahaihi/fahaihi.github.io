@@ -1,2 +1,2 @@
 I am a Ph.D. candidate from the Nankai University (NKU) and Nanyang Technolgical University (NTU). My research area includes AI Compression, Parallel Computing, and Bioinformatics.
-I'm services as a reviewer of ICASSP-25, IJCNN-25, and AAAI-25.
+I'm services as a reviewer of ICASSP-25, IJCNN-25, and WWW-25.
