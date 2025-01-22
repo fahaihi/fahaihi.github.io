@@ -4,6 +4,20 @@
 My full papers and patents list are shown at [my personal homepage](https://fahaihi.github.io).
 
 #### 🎙 Accepted Conference or Journal Papers
+[10] 钟诚, **孙辉**$^{\star}$. 高错误率长序列基因组数据敏感序列识别并行算法, 通信学报, 2023, CCF-A, EI.}
+
+
+[9] **Hui Sun**$^\dagger$, Huidong Ma$^\dagger$, Yingfeng Zheng, Haonan Xie, Xiaofei Wang, Xiaoguang Liu$^{\star}$, Gang Wang$^{\star}$. SR2C: A structurally redundant short reads collapser for optimizing DNA data compression, Published in 2023 IEEE 29th International Conference on Parallel and Distributed Systems (ICPADS), CCF-C.
+
+
+[8] **Hui Sun**, Yingfeng Zheng, Haonan Xie, Huidong Ma, Xiaoguang Liu$^{\star}$, Gang Wang$^{\star}$. PMFFRC: a large-scale genomic short reads compression optimizer via memory modeling and redundant clustering, Published in BMC Bioinformatics journal, 2023, CCF-C, JCR-Q2.
+
+[7]  **孙辉**, 丁延锋, 王刚$^{\star}$, 李桢荣. 融合聚类和卷积神经网络的原理图美观度评价算法, 华中科技大学学报, 2024, EI.
+
+[6] **孙辉**, 钟诚$^{\star}$. 融合过滤和相似度计算的高错误率基因组数据敏感序列识别, 小型微型计算机系统, 2022, CCF-B.
+
+[5] Huidong Ma, **Hui Sun**, Liping Yi, Gang Wang$^{\star}$, Xiaoguang Liu$^{\star}$. Multi-source data lossless compression via parallel expansion mapping and xLSTM, Published in 2025 IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 2025, CCF-B.
+
 [4] Huidong Ma, Cheng Zhong$^{\star}$, **Hui Sun**, Danyang Chen, Haixiang Lin. ricME: long-read based mobile element variant detection using sequence realignment and identity calculation, Published International Symposium on Bioinformatics Research and Applications (ISBRA), 2023, CCF-C.
 
 [3] Haonan Xie, Renhao Huang, **Hui Sun**, Zepeng Han, Meihui Jiang, Dongdong Zhang$^{\star}$, Hui Hwang Goh$^{\star}$, Tonni Agustiono Kurniawan, Fei Han, Hui Liu, Thomas Wu. Wireless energy: Paving the way for smart cities and a greener future, Energy and Buildings, 2023, JCR-Q1.
