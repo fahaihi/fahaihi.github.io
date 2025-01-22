@@ -4,8 +4,8 @@
 My full papers and patents list are shown at [my personal homepage](https://fahaihi.github.io).
 
 #### 🎙 Accepted Conference or Journal Papers
-[2] Haonan Xie, Hui Hwang Goh*, Dongdong Zhang$^{\star}$, \textbf{Hui Sun}, Wei Dai, Tonni Agustiono Kurniawan, Dennis WL Wong, Kenneth Tze Kin Teo, Kai Chen Goh. Eco-Energetical analysis of circular economy and community-based virtual power plants (CE-cVPP): A systems engineering-engaged life cycle assessment (SE-LCA) method for sustainable renewable energy development, Applied Energy, 2024, JCR-Q1.
--[1] 唐印浒, 刘峻$^*$, 王淋, **孙辉**, 赵凤娇, 钟诚. 多维度评价科技工作责任主体信用模型与算法, 广西大学学报, 2021, CSCD核心.
+-[2] Haonan Xie, Hui Hwang Goh$^{\star}$, Dongdong Zhang$^{\star}$, **Hui Sun**, Wei Dai, Tonni Agustiono Kurniawan, Dennis WL Wong, Kenneth Tze Kin Teo, Kai Chen Goh. Eco-Energetical analysis of circular economy and community-based virtual power plants (CE-cVPP): A systems engineering-engaged life cycle assessment (SE-LCA) method for sustainable renewable energy development, Applied Energy, 2024, JCR-Q1.
+-[1] 唐印浒, 刘峻$^{\star}$, 王淋, **孙辉**, 赵凤娇, 钟诚. 多维度评价科技工作责任主体信用模型与算法, 广西大学学报, 2021, CSCD核心.
 
 #### 👄 Electronic Design Automation (EDA) Circuit Layout and Routing.
 - ``2024`` A Schematic Aesthetics Evaluation Algorithm Integrating Clustering and Convolutional Neural Networks, Accepted by Huazhong University of Science and Technology, (ranked 2nd).
