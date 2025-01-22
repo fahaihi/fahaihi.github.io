@@ -3,17 +3,9 @@
 
 My full papers and patents list are shown at [my personal homepage](https://fahaihi.github.io).
 
-#### 🎙 Parallel and Security Data Compression
-- ``2025`` 1Genomics Data Lossless Compression with (s,k)-mer Encoding and Deep Neural Networks, Submitted to AAAI-2024 conference, (ranked 1st).
-- ``2025`` Genomics Data Lossless Compression with (s,k)-mer Encoding and Deep Neural Networks, Submitted to AAAI-2024 conference, (ranked 1st).
-- ``2024`` A Survey and Benchmark Evaluation for Neural-Network Based Lossless Universal Compressors Toward Multi-Source Data, Submitted to FCS journal, (ranked 1st).
-- ``2024`` PQSDC: A Novel Parallel Quality Scores Data Compressor via Sequences Partition and Run-length Prediction Mapping, Published in Bioinformatics, (ranked 1st).
-- ``2024`` LRCB: A Comprehensive Benchmark Evaluation of Reference-free Lossless Compression Tools for Genomics Sequencing Long Reads Data, Accepted by DCC 2024, (ranked 1st).
-- ``2023`` SR2C: A Structurally Redundant Short Reads Collapser for Optimizing DNA Data Compression, Published in ICPADS 2024, (ranked 1st).
-- ``2023`` PMFFRC: a large-scale genomic short reads compression optimizer via memory modeling and redundant clustering, Published in BMC Bioinformatics, (ranked 1st).
-- ``2023`` Parallel Algorithm for Sensitive Sequence Recognition from Long-read Genome Data with High Error Rate, Published in Journal on Communications, (ranked 2nd, Corresponding Author)
-- ``2022`` Recognizing Sensitive Sequences from Genomic Data with High Error Rate Integrating Filter and Similarity Calculation, Published in Journal of Chinese Computer Systems, (ranked 1st).
-
+#### 🎙 Accepted Conference or Journal Papers
+[2] Haonan Xie, Hui Hwang Goh*, Dongdong Zhang$^{\star}$, \textbf{Hui Sun}, Wei Dai, Tonni Agustiono Kurniawan, Dennis WL Wong, Kenneth Tze Kin Teo, Kai Chen Goh. Eco-Energetical analysis of circular economy and community-based virtual power plants (CE-cVPP): A systems engineering-engaged life cycle assessment (SE-LCA) method for sustainable renewable energy development, Applied Energy, 2024, JCR-Q1.
+-[1] 唐印浒, 刘峻$^*$, 王淋, **孙辉**, 赵凤娇, 钟诚. 多维度评价科技工作责任主体信用模型与算法, 广西大学学报, 2021, CSCD核心.
 
 #### 👄 Electronic Design Automation (EDA) Circuit Layout and Routing.
 - ``2024`` A Schematic Aesthetics Evaluation Algorithm Integrating Clustering and Convolutional Neural Networks, Accepted by Huazhong University of Science and Technology, (ranked 2nd).
