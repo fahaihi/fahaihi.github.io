@@ -1,9 +1,6 @@
-\subsection{\textbf{已发表会议及期刊论文}}
-\begin{enumerate}[{label=[\arabic{*}]},noitemsep,parsep=0.9ex]
+## Published Conference or Jorunal Papers
 
-%\datedsubsection{\textbf{第一或通讯作者：}}{}
-
-\item {\color{black}\textbf{Hui Sun}$^\dagger$, Lipng Yi$^\dagger$, Huidong Ma, Yongxia Sun, Yingfeng Zheng, Wenwen Cui, Meng Yan, Gang Wang${^*}$, Xiaoguang Liu${^*}$. Genomics data lossless compression with $(s,k)$-mer encoding and deep neural networks, Published in The 39th Annual AAAI Conference on Artificial Intelligence (AAAI), 2025, CCF-A.}
+\item **Hui Sun**$^\dagger$, Lipng Yi$^\dagger$, Huidong Ma, Yongxia Sun, Yingfeng Zheng, Wenwen Cui, Meng Yan, Gang Wang${^*}$, Xiaoguang Liu${^*}$. Genomics data lossless compression with $(s,k)$-mer encoding and deep neural networks, Published in The 39th Annual AAAI Conference on Artificial Intelligence (AAAI), 2025, CCF-A.
 
 \item Huidong Ma$^\dagger$, \textbf{Hui Sun}$^\dagger$, Liping Yi, Yanfeng Ding, Xiaoguang Liu${^*}$, Gang Wang${^*}$. MSDZip: Universal Lossless Compression for Multi-source Data via Stepwise-parallel and Learning-based Prediction, Published in The Web Conference (WWW), 2025, CCF-A
 
