@@ -1,7 +1,6 @@
 
 # 💻 Papers and Patents
 
-My full papers and patents list are shown at [my personal homepage](https://fahaihi.github.io).
 
 #### 🎙 Accepted Conference or Journal Papers
 - [16] **Hui Sun**$^\dagger$, Liping Yi$^\dagger$, Huidong Ma, Yongxia Sun, Yingfeng Zheng, Wenwen Cui, Meng Yan, Gang Wang$^{\star}$, Xiaoguang Liu$^{\star}$. Genomics data lossless compression with $(s,k)$-mer encoding and deep neural networks, Published in The 39th Annual AAAI Conference on Artificial Intelligence (AAAI), 2025, CCF-A.
