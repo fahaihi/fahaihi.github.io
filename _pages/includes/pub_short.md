@@ -3,6 +3,7 @@
 
 
 #### Leadership Publication Work
+- [12] **Hui Sun**, Yanfeng Ding, Liping Yi, Huidong Ma, Gang Wang$^{\star}$, Xiaoguang Liu$^{\star}$, Cheng Zhong, Wentong Cai. PMKLC: Parallel Multi-Knowledge Learning-based Lossless Compression for Large-Scale Genomics Database, Association for Computing Machinery's Special Interest Group on Knowledge Discovery and Data Mining (KDD), 2025, (CCF-A).
 - [11] **Hui Sun**$^\dagger$, Liping Yi$^\dagger$, Huidong Ma, Yongxia Sun, Yingfeng Zheng, Wenwen Cui, Meng Yan, Gang Wang$^{\star}$, Xiaoguang Liu$^{\star}$. Genomics data lossless compression with $(s,k)$-mer encoding and deep neural networks, Published in The 39th Annual AAAI Conference on Artificial Intelligence (AAAI), 2025, CCF-A.
 - [10] Huidong Ma$^\dagger$, **Hui Sun**$^\dagger$, Liping Yi, Yanfeng Ding, Xiaoguang Liu$^{\star}$, Gang Wang$^{\star}$. MSDZip: Universal Lossless Compression for Multi-source Data via Stepwise-parallel and Learning-based Prediction, Published in The Web Conference (WWW), 2025, CCF-A.
 - [9] **Hui Sun**$^\dagger$, Yanfeng Ding$^\dagger$, Liping Yi, Huidong Ma, Haonan Xie, Gang Wang$^{\star}$, Xiaoguang Liu$^{\star}$. Adaptive lossless compression for genomics data by multiple ($s, k$)-mer encoding and xLSTM, Published in 2025 IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 2025, CCF-B.
