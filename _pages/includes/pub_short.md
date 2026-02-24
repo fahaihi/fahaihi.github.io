@@ -3,6 +3,7 @@
 
 
 #### Leadership Publication Work
+- [13] Ma Huidong, Xinyan Shi, \textbf{**Sun Hui**}$^*$, Xiaofei Yue, Xiaoguang Liu$^*$, Gang Wang$^*$, Wentong Cai. Learned Image Compression via Sparse Attention and Adaptive Frequency, CVPR, 2026, CCF-A, 通信作者.
 - [12] **Hui Sun**, Yanfeng Ding, Liping Yi, Huidong Ma, Gang Wang$^{\star}$, Xiaoguang Liu$^{\star}$, Cheng Zhong, Wentong Cai. PMKLC: Parallel Multi-Knowledge Learning-based Lossless Compression for Large-Scale Genomics Database, Association for Computing Machinery's Special Interest Group on Knowledge Discovery and Data Mining (KDD), 2025, CCF-A.
 - [11] **Hui Sun**$^\dagger$, Liping Yi$^\dagger$, Huidong Ma, Yongxia Sun, Yingfeng Zheng, Wenwen Cui, Meng Yan, Gang Wang$^{\star}$, Xiaoguang Liu$^{\star}$. Genomics data lossless compression with $(s,k)$-mer encoding and deep neural networks, Published in The 39th Annual AAAI Conference on Artificial Intelligence (AAAI), 2025, CCF-A.
 - [10] Huidong Ma$^\dagger$, **Hui Sun**$^\dagger$, Liping Yi, Yanfeng Ding, Xiaoguang Liu$^{\star}$, Gang Wang$^{\star}$. MSDZip: Universal Lossless Compression for Multi-source Data via Stepwise-parallel and Learning-based Prediction, Published in The Web Conference (WWW), 2025, CCF-A.
@@ -10,7 +11,7 @@
 - [8] **Hui Sun**, Yingfeng Zheng, Haonan Xie, Huidong Ma, Cheng Zhong, Meng Yan$^{\star}$, Xiaoguang Liu, Gang Wang. PQSDC: a novel parallel quality scores data compressor via sequences partition and run-length prediction mapping, Published in Bioinformatics journal, 2024, CCF-B, JCR-Q1, (领域Top期刊).
 - [7] **Hui Sun**$^\dagger$, Huidong Ma$^\dagger$, Feng Ling, Haonan Xie, Yongxia Sun, Liping Yi, Meng Yan$^{\star}$, Cheng Zhong, Xiaoguang Liu, Gang Wang$^{\star}$. A survey and benchmark evaluation for neural-network-based lossless universal compressors toward multi-source data, Published in FCS journal, 2024, CCF-B, JCR-Q2.
 - [6] **Hui Sun**$^\dagger$, Huidong Ma$^\dagger$,Yingfeng Zheng, Haonan Xie, Cheng Zhong, Xiaoguang Liu$^{\star}$, Gang Wang$^{\star}$. LRCB: A comprehensive benchmark evaluation of reference-free lossless compression tools for genomics sequencing long reads data, Published In 2024 Data Compression Conference (DCC), CCF-B, EI.
-- [5] 钟诚, **孙辉**$^{\star}$. 高错误率长序列基因组数据敏感序列识别并行算法, 通信学报, 2023, CCF-A, EI.
+- [5] 钟诚, **孙辉**$^{\star}$. 高错误率长序列基因组数据敏感序列识别并行算法, 通信学报, 2023, CCF-A, 通信作者.
 - [4] **Hui Sun**$^\dagger$, Huidong Ma$^\dagger$, Yingfeng Zheng$^\dagger$, Haonan Xie, Xiaofei Wang, Xiaoguang Liu$^{\star}$, Gang Wang$^{\star}$. SR2C: A structurally redundant short reads collapser for optimizing DNA data compression, Published in 2023 IEEE 29th International Conference on Parallel and Distributed Systems (ICPADS), CCF-C.
 - [3] **Hui Sun**, Yingfeng Zheng, Haonan Xie, Huidong Ma, Xiaoguang Liu$^{\star}$, Gang Wang$^{\star}$. PMFFRC: a large-scale genomic short reads compression optimizer via memory modeling and redundant clustering, Published in BMC Bioinformatics journal, 2023, CCF-C, JCR-Q2.
 - [2]  **孙辉**, 丁延锋, 王刚$^{\star}$, 李桢荣. 融合聚类和卷积神经网络的原理图美观度评价算法, 华中科技大学学报, 2024, EI.
