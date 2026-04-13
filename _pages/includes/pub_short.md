@@ -3,6 +3,8 @@
 
 
 #### Leadership Publication Work
+- [15] **Hui Sun**$^\dagger$, Yanfeng Ding$^\dagger$, Huidong Ma, Chang Xu, Keyan Jin, Lizheng Zu,Cheng Zhong, Xiaoguang Liu$^{\star}$, Gang Wang$^{\star}$, Wentong Cai. AgentGC: Evolutionary Learning-based Lossless Compression for Genomics Data with LLM-driven Multiple Agent, ACL, 2026, CCF-A.
+- [14] Huidong Ma, Xinyan Shi, **Sun Hui**, Xiaofei Yue, xiaoguang Liu$^{\star}$, Gang Wang$^{\star}$, Wentong Cai .Efficient Learned Data Compression via Dual-Stream Feature Decoupling, ACL, 2026, CCF-A.
 - [13] Ma Huidong, Xinyan Shi, **Sun Hui**$\star$, Xiaofei Yue, Xiaoguang Liu$\star$, Gang Wang$\star$, Wentong Cai. Learned Image Compression via Sparse Attention and Adaptive Frequency, CVPR, 2026, CCF-A, 通信作者.
 - [12] **Hui Sun**, Yanfeng Ding, Liping Yi, Huidong Ma, Gang Wang$^{\star}$, Xiaoguang Liu$^{\star}$, Cheng Zhong, Wentong Cai. PMKLC: Parallel Multi-Knowledge Learning-based Lossless Compression for Large-Scale Genomics Database, Association for Computing Machinery's Special Interest Group on Knowledge Discovery and Data Mining (KDD), 2025, CCF-A.
 - [11] **Hui Sun**$^\dagger$, Liping Yi$^\dagger$, Huidong Ma, Yongxia Sun, Yingfeng Zheng, Wenwen Cui, Meng Yan, Gang Wang$^{\star}$, Xiaoguang Liu$^{\star}$. Genomics data lossless compression with $(s,k)$-mer encoding and deep neural networks, Published in The 39th Annual AAAI Conference on Artificial Intelligence (AAAI), 2025, CCF-A.
