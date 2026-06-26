@@ -1,16 +1,9 @@
-# GitHub Pages config — plain HTML mode (no Jekyll theme)
 title: "Sun Hui (孙辉)"
 description: "LLM Researcher at Shopee. Ph.D., Nankai University. Research: AI4Compression, HPC, Time-Series LLMs."
 url: "https://fahaihi.github.io"
-
-# Google Analytics
 google_analytics: G-SWFCX99KQZ
-
-# SEO verification
 google_site_verification: b_BbOIt7d513ZXYDw-YRMicO6O5tthYiouqWDdWjGTU
 bing_site_verification: B5AA590E7B9C03956A6F7DEC0F776211
 baidu_site_verification: code-ZxFK3f4pfb
-
-# Disable default Jekyll processing — serve index.html as-is
 theme: ~
 plugins: []
