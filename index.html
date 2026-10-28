@@ -7,8 +7,8 @@
   <meta name="description" content="LLM Researcher at Shopee. Ph.D., Nankai University. Research: AI4Compression, HPC, Time-Series LLMs.">
   <meta property="og:title" content="Sun Hui (孙辉)">
   <meta property="og:description" content="LLM Researcher at Shopee. Ph.D., Nankai University. Research: AI4Compression, HPC, Time-Series LLMs.">
-  <meta property="og:url" content="https://fahaihi.github.io/">
-  <meta property="og:image" content="https://fahaihi.github.io/images/sh_profile.jpeg">
+  <meta property="og:url" content="https://huisun.top/">
+  <meta property="og:image" content="https://huisun.top/images/sh_profile.jpeg">
   <meta name="google-site-verification" content="b_BbOIt7d513ZXYDw-YRMicO6O5tthYiouqWDdWjGTU">
   <meta name="msvalidate.01" content="B5AA590E7B9C03956A6F7DEC0F776211">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
@@ -28,7 +28,7 @@
       --bg:#ffffff;--card:#ffffff;--chip:#f3f4f6;
       --text:#1f2937;--muted:#4b5563;--hint:#9ca3af;
       --rule:#e5e7eb;--rule-soft:#f0f1f3;
-      --accent:#1e40af;--accent-soft:#eff4ff;--oral:#c2410c;
+      --accent:#1e40af;--accent-soft:#eff4ff;--oral:#c2410c;--thumb-dim:none;
       --sans:'Inter',-apple-system,'PingFang SC','Microsoft YaHei',system-ui,sans-serif;
       --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
     }
@@ -36,13 +36,13 @@
       --bg:#111214;--card:#17181b;--chip:#23252a;
       --text:#e5e7eb;--muted:#a1a7b3;--hint:#6b7280;
       --rule:#2a2c31;--rule-soft:#202226;
-      --accent:#8fb0ff;--accent-soft:#1b2440;--oral:#fb923c;
+      --accent:#8fb0ff;--accent-soft:#1b2440;--oral:#fb923c;--thumb-dim:brightness(.86);
     }}
     :root[data-theme="dark"]{
       --bg:#111214;--card:#17181b;--chip:#23252a;
       --text:#e5e7eb;--muted:#a1a7b3;--hint:#6b7280;
       --rule:#2a2c31;--rule-soft:#202226;
-      --accent:#8fb0ff;--accent-soft:#1b2440;--oral:#fb923c;
+      --accent:#8fb0ff;--accent-soft:#1b2440;--oral:#fb923c;--thumb-dim:brightness(.86);
     }
     html{scroll-behavior:smooth;scroll-padding-top:72px}
     body{font-family:var(--sans);background:var(--bg);color:var(--text);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
@@ -55,7 +55,9 @@
     .topnav nav{display:flex;gap:24px;font-size:14px;color:var(--muted);overflow-x:auto;scrollbar-width:none}
     .topnav nav::-webkit-scrollbar{display:none}
     .topnav nav a{white-space:nowrap;transition:color .15s}
-    .topnav nav a:hover{color:var(--text)}
+    .topnav nav a:hover,.topnav nav a.on{color:var(--text)}
+    .topnav nav a{position:relative}
+    .topnav nav a.on::after{content:"";position:absolute;left:0;right:0;bottom:-17px;height:2px;border-radius:2px;background:var(--accent)}
 
     .layout{max-width:1280px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:180px 1fr;gap:48px}
 
@@ -63,7 +65,6 @@
     aside{position:sticky;top:52px;align-self:start;padding:40px 0}
     .avatar{width:140px;height:140px;border-radius:50%;object-fit:cover;object-position:50% 15%;border:4px solid var(--card);box-shadow:0 0 0 1px var(--rule)}
     .side-name{font-size:20px;font-weight:600;margin-top:18px;line-height:1.25}
-    .side-name span{font-weight:400;color:var(--hint);font-size:17px;margin-left:4px}
     .side-aff{font-size:14px;color:var(--muted);margin-top:4px;line-height:1.55}
     .side-loc{color:var(--hint);font-size:13px}
     .side-links{list-style:none;margin-top:18px;font-size:14px}
@@ -87,6 +88,9 @@
     .news::before{content:"";position:absolute;left:5px;top:10px;bottom:10px;width:1px;background:var(--rule)}
     .news li{position:relative;padding:5px 0;font-size:14.5px}
     .news li::before{content:"";position:absolute;left:-21px;top:12px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+    .news-scroll{overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--rule) transparent}
+    .news-scroll.more{-webkit-mask-image:linear-gradient(#000 calc(100% - 20px),transparent);mask-image:linear-gradient(#000 calc(100% - 20px),transparent)}
+    .soon{margin-left:8px;font-size:11px;font-weight:600;color:var(--oral);border:1px solid var(--oral);border-radius:4px;padding:0 6px;vertical-align:1px}
     .news time{font-family:var(--mono);font-size:12px;color:var(--muted);background:var(--chip);padding:2px 7px;border-radius:4px;margin-right:8px}
 
     /* filter */
@@ -100,6 +104,10 @@
     .chip{font-size:12.5px;font-weight:500;padding:4px 12px;border-radius:99px;border:1px solid var(--rule);background:var(--card);color:var(--muted);cursor:pointer;font-family:inherit;transition:all .15s}
     .chip:hover{border-color:var(--hint);color:var(--text)}
     .chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+    #filters{scroll-margin-top:72px}
+    .chip .n{margin-left:5px;font-size:11px;opacity:.6;font-variant-numeric:tabular-nums}
+    #papers.fade{animation:fade .25s ease}
+    @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
     .meta{display:flex;justify-content:space-between;align-items:center;gap:4px 16px;flex-wrap:wrap;margin:0 0 12px}
     .marks{font-size:12.5px;color:var(--hint);margin-top:10px}
     .hint{font-size:13px;color:var(--muted)}
@@ -111,7 +119,20 @@
     .paper{padding:16px 0 15px;border-bottom:1px solid var(--rule-soft)}
     .p-title{transition:color .15s}
     .paper:hover .p-title{color:var(--accent)}
-    .paper[hidden]{display:none}
+    .paper[hidden]{display:none!important}
+    .paper.has-thumb{display:grid;grid-template-columns:224px 1fr;gap:22px;align-items:start}
+    .p-thumb{display:block;aspect-ratio:16/10;background:#fff;border:1px solid var(--rule);border-radius:8px;overflow:hidden;cursor:zoom-in;transition:border-color .15s,box-shadow .15s}
+    .p-thumb:hover{border-color:var(--accent);box-shadow:0 4px 14px rgba(0,0,0,.08)}
+    .p-thumb img{filter:var(--thumb-dim);width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s}
+    .p-thumb:hover img{transform:scale(1.03)}
+    .p-body{min-width:0}
+    .org{white-space:nowrap}
+    .org img{height:1.15em;width:1.15em;object-fit:contain;vertical-align:-.2em;margin-right:5px;border-radius:4px;background:#fff;padding:1px}
+    #papers.compact .paper.has-thumb{display:block}
+    #papers.compact .p-thumb{display:none}
+    .lightbox{position:fixed;inset:0;z-index:50;background:rgba(10,12,16,.82);display:flex;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+    .lightbox[hidden]{display:none}
+    .lightbox img{max-width:min(1200px,100%);max-height:100%;background:#fff;border-radius:8px;padding:12px;box-shadow:0 10px 40px rgba(0,0,0,.4)}
     .p-title{font-weight:600;font-size:15px;line-height:1.45}
     .p-authors{font-size:14px;color:var(--muted);margin-top:4px;line-height:1.55}
     .p-authors b{color:var(--text);font-weight:600}
@@ -123,10 +144,6 @@
     .badge{font-size:11.5px;font-weight:600;padding:1px 7px;border-radius:5px;border:1px solid var(--rule);color:var(--muted);line-height:1.6}
     .badge.a{border-color:var(--accent);color:var(--accent)}
     .badge.oral{border-color:var(--oral);color:var(--oral)}
-    .tip{margin-left:2px;position:relative;display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:var(--hint);color:var(--bg);font-size:10.5px;font-weight:700;cursor:help;border:none;font-family:inherit}
-    .tip .bubble{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#111827;color:#f9fafb;font-size:12px;font-weight:400;line-height:1.5;padding:8px 11px;border-radius:7px;width:max-content;max-width:280px;text-align:left;opacity:0;pointer-events:none;transition:opacity .15s;z-index:5}
-    .tip .bubble b{display:block;font-weight:600;color:#fff}
-    .tip:hover .bubble,.tip:focus .bubble,.tip.open .bubble{opacity:1}
     .p-links{display:flex;gap:16px;font-size:13px;font-weight:500}
     .p-links a{display:inline-flex;align-items:center;gap:5px;color:var(--muted);transition:color .15s}
     .p-links a:hover{color:var(--accent)}
@@ -140,11 +157,13 @@
     ul.plain li{margin:5px 0}
     ul.plain li::marker{color:var(--hint)}
     ul.plain .y{color:var(--hint)}
-    ul.plain .prize{color:var(--accent);font-weight:500}
+    ul.plain .prize{color:var(--text);font-weight:600}
 
     footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--rule);font-size:13px;color:var(--hint)}
 
     @media(max-width:860px){
+      .paper.has-thumb{grid-template-columns:minmax(0,1fr);gap:12px}
+      .p-thumb{max-width:360px}
       .topnav .in{padding:0 16px;gap:20px}
       .brand{display:none}
       .layout{grid-template-columns:1fr;gap:0;padding:0 16px}
@@ -162,7 +181,7 @@
 
 <header class="topnav">
   <div class="in">
-    <a class="brand" href="#top">Sun Hui</a>
+    <a class="brand" href="#top">Dr. Sun Hui</a>
     <nav>
       <a href="#about">About</a>
       <a href="#news">News</a>
@@ -179,13 +198,14 @@
   <!-- ── Sidebar ── -->
   <aside>
     <img class="avatar" src="images/sh_profile.jpeg" alt="Portrait of Sun Hui">
-    <div class="side-name">Sun Hui<span>孙辉</span></div>
+    <div class="side-name">Dr. Sun Hui</div>
     <div class="side-aff">LLM Researcher, Shopee<br><span class="side-loc">Beijing, China</span></div>
     <ul class="side-links">
       <li><a href="mailto:adairmillersh@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>Email</a></li>
       <li><a href="https://scholar.google.com/citations?user=YcDCx94AAAAJ&hl=en" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 1 9l11 6 9-4.91V17M5 13.18v4L12 21l7-3.82v-4"/></svg>Google Scholar</a></li>
+      <li><a href="https://orcid.org/0000-0003-0290-142X" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>ORCID</a></li>
       <li><a href="https://github.com/fahaihi" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/fahaihi" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
+      <li><a href="https://www.linkedin.com/in/huisun197" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
     </ul>
   </aside>
 
@@ -195,9 +215,9 @@
     <section id="about">
       <h2>Biography</h2>
       <p class="bio">
-        I am an LLM Researcher at <b>Shopee</b>. I received my Ph.D. in Computer Science from <b>Nankai University</b>, jointly trained with <b>Nanyang Technological University</b>, Singapore, as a member of the Nankai-Baidu Joint Lab (NBJL).
-        I was previously a research intern at <b>Microsoft Research Asia</b>, working on time-series LLMs.
-        My research interests include <b>AI for Data Compression</b>, <b>High-Performance Computing</b>, and <b>Time-Series Large Language Models</b>,
+        I am an LLM Researcher at <b class="org"><img src="images/logos/sea.png" alt="" aria-hidden="true">Sea Group</b>, <b class="org"><img src="images/logos/shopee.png" alt="" aria-hidden="true">Shopee LLM Team</b>. I received my Ph.D. in Computer Science from <b class="org"><img src="images/logos/nankai.png" alt="" aria-hidden="true">Nankai University</b>, jointly trained with <b class="org"><img src="images/logos/ntu.png" alt="" aria-hidden="true">Nanyang Technological University</b>, Singapore, as a member of the Nankai-Baidu Joint Lab (NBJL).
+        I was previously a research intern at <b class="org"><img src="images/logos/microsoft.png" alt="" aria-hidden="true">Microsoft Research Asia</b>, working on time-series LLMs.
+        My research interests include <b>Code LLMs &amp; Agents</b>, <b>AI for Data Compression</b>, and <b>High-Performance Computing</b>,
         with 30 publications at venues including KDD, AAAI, WWW, ACL, CVPR and <i>Bioinformatics</i>.
         Most of my tools are open-sourced on <a href="https://github.com/fahaihi" target="_blank" rel="noopener">GitHub</a>. Please feel free to reach out if you are interested in my research.
       </p>
@@ -206,8 +226,9 @@
     <!-- ── News ── -->
     <section id="news">
       <h2>News</h2>
+      <div class="news-scroll" id="news-scroll">
       <ul class="news">
-        <li><time>2026.11</time>🎤 Invited talk at Asian Transplantation Week (ATW) 2026, Busan, Korea.</li>
+        <li><time>2026.11</time>🎤 Invited talk at Asian Transplantation Week (ATW) 2026, Busan, Korea.<span class="soon" data-until="2026-11-15">Upcoming</span></li>
         <li><time>2026.07</time>💼 Joined Sea Group as an LLM Researcher in the Shopee LLM Team, Beijing.</li>
         <li><time>2026.05</time>🎉 Two papers are accepted by ACL 2026 (including 1 Oral).</li>
         <li><time>2026.02</time>🎉 One paper is accepted by CVPR 2026.</li>
@@ -215,6 +236,7 @@
         <li><time>2025.10</time>💼 Joined Microsoft Research Asia as a research intern.</li>
         <li><time>2025.07</time>🎉 PMKLC is accepted by SIGKDD 2025.</li>
       </ul>
+      </div>
     </section>
 
     <!-- ── Publications ── -->
@@ -222,10 +244,10 @@
       <h2>Publications</h2>
       <div class="filters" id="filters">
         <button class="chip" data-topic="" aria-pressed="true">Selected</button>
+        <button class="chip" data-topic="techreport" aria-pressed="false">Industry Tech Reports</button>
+        <button class="chip" data-topic="llm" aria-pressed="false">LLM &amp; Agent</button>
         <button class="chip" data-topic="compression" aria-pressed="false">AI4Compression</button>
         <button class="chip" data-topic="hpc" aria-pressed="false">High Performance Computing</button>
-        <button class="chip" data-topic="llm" aria-pressed="false">LLM &amp; Agent</button>
-        <button class="chip" data-topic="techreport" aria-pressed="false">Industry Tech Reports</button>
         <button class="chip" data-topic="other" aria-pressed="false">Others</button>
         <button class="chip" data-topic="all" aria-pressed="false">All</button>
       </div>
@@ -234,66 +256,84 @@
       <!-- data-tags: "first" = first / co-first / corresponding author; "ccfa" + "techreport" make up the default Selected view; other tags match the chips above -->
       <ul class="papers" id="papers">
 
-        <li class="paper" data-tags="llm,techreport">
+        <li class="paper has-thumb" data-tags="techreport">
+          <a class="p-thumb" href="images/papers/opdarena.webp" aria-label="View framework figure"><img src="images/papers/thumb/opdarena.webp" alt="Framework figure" loading="lazy"></a>
+          <div class="p-body">
           <div class="p-title">OPDArena: Understanding Learning and Forgetting in On-Policy Distillation</div>
           <div class="p-authors">Yuanze Xu, Tianzhu Ye, <b>Hui Sun</b>, Wenhui Wang, Li Dong, Furu Wei</div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">arXiv 2026</span><span class="badge a">Tech Report</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>arXiv preprint 2610.25651</b></span></button></div>
+            <div class="p-venue"><span class="vchip" title="arXiv preprint 2610.25651">arXiv 2026</span><span class="badge a">Tech Report</span></div>
             <div class="p-links"><a href="https://arxiv.org/abs/2610.25651" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
+          </div>
           </div>
         </li>
 
-        <li class="paper" data-tags="llm,techreport">
+        <li class="paper has-thumb" data-tags="techreport">
+          <a class="p-thumb" href="images/papers/reats.webp" aria-label="View framework figure"><img src="images/papers/thumb/reats.webp" alt="Framework figure" loading="lazy"></a>
+          <div class="p-body">
           <div class="p-title">REATS: LLM Reasoning-based Ensemble Learning for Adaptive Time Series Forecasting</div>
           <div class="p-authors">Xu Zhang, Chang Xu, <b>Hui Sun</b>, Nan Ma, Zijian Zhang, Peng Wang, Wei Wang, Li Zhao</div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">arXiv 2026</span><span class="badge a">Tech Report</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>arXiv preprint 2608.10149</b></span></button></div>
+            <div class="p-venue"><span class="vchip" title="arXiv preprint 2608.10149">arXiv 2026</span><span class="badge a">Tech Report</span></div>
             <div class="p-links"><a href="https://arxiv.org/abs/2608.10149" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
+          </div>
           </div>
         </li>
 
-        <li class="paper" data-tags="first,compression,llm">
+        <li class="paper" data-tags="first,llm">
           <div class="p-title">LLCBench: Benchmarking Lossless Compression of Large Language Models</div>
           <div class="p-authors"><b>Hui Sun</b>, Jiashun Chen, Huidong Ma, Xiantong Luo, Chang Xu, Haonan Xie, Lizheng Zu, Qi Ming, Xiaoguang Liu, Gang Wang, Cheng Zhong, Wentong Cai</div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">Preprint</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>Preprint</b></span></button></div>
+            <div class="p-venue"><span class="vchip" title="Preprint">Preprint</span></div>
             <div class="p-links"><a href="https://www.researchgate.net/profile/Hui-Sun-84/publication/416431205_LLCBench_Benchmarking_Lossless_Compression_of_Large_Language_Models/links/6ad86edbe807b426879a88a9/LLCBench-Benchmarking-Lossless-Compression-of-Large-Language-Models.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/fahaihi/LLCBench" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
           </div>
         </li>
 
-        <li class="paper" data-tags="first,llm,techreport">
+        <li class="paper has-thumb" data-tags="first,techreport">
+          <a class="p-thumb" href="images/papers/chatad.webp" aria-label="View framework figure"><img src="images/papers/thumb/chatad.webp" alt="Framework figure" loading="lazy"></a>
+          <div class="p-body">
           <div class="p-title">ChatAD: Reasoning-Enhanced Time-Series Anomaly Detection with Multi-Turn Instruction Evolution</div>
           <div class="p-authors"><b>Hui Sun</b><sup>*</sup>, Chang Xu<sup>†</sup>, Haonan Xie, Hao Li, Yuhao Huang, Chuheng Zhang, Ming Jin, Xiaoguang Liu, Gang Wang, Jiang Bian</div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">arXiv 2026</span><span class="badge a">Tech Report</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>arXiv preprint 2601.13546</b>Work done at Microsoft Research Asia</span></button></div>
+            <div class="p-venue"><span class="vchip" title="arXiv preprint 2601.13546">arXiv 2026</span><span class="badge a">Tech Report</span></div>
             <div class="p-links"><a href="https://arxiv.org/abs/2601.13546" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
+          </div>
           </div>
         </li>
 
-        <li class="paper" data-tags="first,compression,llm,ccfa">
+        <li class="paper has-thumb" data-tags="first,ccfa,llm">
+          <a class="p-thumb" href="images/papers/agentgc.webp" aria-label="View framework figure"><img src="images/papers/thumb/agentgc.webp" alt="Framework figure" loading="lazy"></a>
+          <div class="p-body">
           <div class="p-title">AgentGC: Evolutionary Learning-based Lossless Compression for Genomics Data with LLM-driven Multiple Agent</div>
           <div class="p-authors"><b>Hui Sun</b><sup>†</sup>, Yanfeng Ding<sup>†</sup>, Huidong Ma, Chang Xu, Keyan Jin, Lizheng Zu, Cheng Zhong, Xiaoguang Liu<sup>*</sup>, Gang Wang<sup>*</sup>, Wentong Cai</div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip hl">ACL 2026</span><span class="badge a">CCF-A</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>Annual Meeting of the Association for Computational Linguistics</b>CCF-A</span></button></div>
+            <div class="p-venue"><span class="vchip hl" title="Annual Meeting of the Association for Computational Linguistics">ACL 2026</span><span class="badge a">CCF-A</span></div>
             <div class="p-links"><a href="https://arxiv.org/abs/2601.13559" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
+          </div>
           </div>
         </li>
 
-        <li class="paper" data-tags="compression,ccfa">
+        <li class="paper has-thumb" data-tags="ccfa,compression">
+          <a class="p-thumb" href="images/papers/fade.webp" aria-label="View framework figure"><img src="images/papers/thumb/fade.webp" alt="Framework figure" loading="lazy"></a>
+          <div class="p-body">
           <div class="p-title">Efficient Learned Data Compression via Dual-Stream Feature Decoupling</div>
           <div class="p-authors">Huidong Ma, Xinyan Shi, <b>Hui Sun</b>, Xiaofei Yue, Xiaoguang Liu<sup>*</sup>, Gang Wang<sup>*</sup>, Wentong Cai</div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip hl">ACL 2026</span><span class="badge oral">Oral</span><span class="badge a">CCF-A</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>Annual Meeting of the Association for Computational Linguistics</b>CCF-A</span></button></div>
+            <div class="p-venue"><span class="vchip hl" title="Annual Meeting of the Association for Computational Linguistics">ACL 2026</span><span class="badge oral">Oral</span><span class="badge a">CCF-A</span></div>
             <div class="p-links"><a href="https://aclanthology.org/2026.acl-long.324/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/huidong-ma/FADE" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
+          </div>
           </div>
         </li>
 
-        <li class="paper" data-tags="first,compression,ccfa">
+        <li class="paper has-thumb" data-tags="first,ccfa,compression">
+          <a class="p-thumb" href="images/papers/saaf.webp" aria-label="View framework figure"><img src="images/papers/thumb/saaf.webp" alt="Framework figure" loading="lazy"></a>
+          <div class="p-body">
           <div class="p-title">Learned Image Compression via Sparse Attention and Adaptive Frequency</div>
           <div class="p-authors">Huidong Ma, Xinyan Shi, <b>Hui Sun</b><sup>*</sup>, Xiaofei Yue, Xiaoguang Liu<sup>*</sup>, Gang Wang<sup>*</sup>, Wentong Cai</div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip hl">CVPR 2026</span><span class="badge a">CCF-A</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>IEEE/CVF Conference on Computer Vision and Pattern Recognition</b>CCF-A</span></button></div>
+            <div class="p-venue"><span class="vchip hl" title="IEEE/CVF Conference on Computer Vision and Pattern Recognition">CVPR 2026</span><span class="badge a">CCF-A</span></div>
             <div class="p-links"><a href="https://openaccess.thecvf.com/content/CVPR2026/html/Ma_Learned_Image_Compression_via_Sparse_Attention_and_Adaptive_Frequency_CVPR_2026_paper.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/huidong-ma/SAAF" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
+          </div>
           </div>
         </li>
 
@@ -301,7 +341,7 @@
           <div class="p-title">Geometric Structure-Aware Diffusion Model with Self-Optimization Strategy for Molecular Generation</div>
           <div class="p-authors">Wenfeng Du, Chunyan Tang, Guanghong Liu, <b>Hui Sun</b>, Jinxiong Zhang, Cheng Zhong</div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">JCTC 2026</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>Journal of Chemical Theory and Computation</b>22: 6204–6217</span></button></div>
+            <div class="p-venue"><span class="vchip" title="Journal of Chemical Theory and Computation">JCTC 2026</span></div>
             <div class="p-links"><a href="https://pubs.acs.org/doi/abs/10.1021/acs.jctc.5c02183" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
           </div>
         </li>
@@ -310,7 +350,7 @@
           <div class="p-title">End-to-End Story Visualization Framework with Penalty-Based Evaluation using Vision-Language Models</div>
           <div class="p-authors">Lizheng Zu, Yaoqing Jin, Siyi Cao, Shiwei Suo, Haoxin Lyu, Song Fu, <b>Hui Sun</b>, Hao Zhang</div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">ICASSP 2026</span><span class="badge n">CCF-B</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>IEEE International Conference on Acoustics, Speech and Signal Processing</b>CCF-B · pp. 10492–10496</span></button></div>
+            <div class="p-venue"><span class="vchip" title="IEEE International Conference on Acoustics, Speech and Signal Processing">ICASSP 2026</span><span class="badge n">CCF-B</span></div>
             <div class="p-links"><a href="https://ieeexplore.ieee.org/abstract/document/11464718/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
           </div>
         </li>
@@ -319,62 +359,74 @@
           <div class="p-title">Artificial Intelligence-Driven Non-Targeted Screening: Applications and Prospects in Environmental and Food Sciences</div>
           <div class="p-authors">Qingrun Liu, Paibin Zhu, <b>Hui Sun</b>, Zhe Chen, Bing Shao</div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">TIFS 2026</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>Trends in Food Science &amp; Technology</b>170: 105632</span></button></div>
+            <div class="p-venue"><span class="vchip" title="Trends in Food Science &amp; Technology">TIFS 2026</span></div>
             <div class="p-links"><a href="https://www.sciencedirect.com/science/article/pii/S0924224426001044" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
           </div>
         </li>
 
-        <li class="paper" data-tags="first,compression,hpc,ccfa">
+        <li class="paper has-thumb" data-tags="first,ccfa,compression">
+          <a class="p-thumb" href="images/papers/pmklc.webp" aria-label="View framework figure"><img src="images/papers/thumb/pmklc.webp" alt="Framework figure" loading="lazy"></a>
+          <div class="p-body">
           <div class="p-title">PMKLC: Parallel Multi-Knowledge Learning-based Lossless Compression for Large-Scale Genomics Database</div>
           <div class="p-authors"><b>Hui Sun</b>, Yanfeng Ding, Liping Yi, Huidong Ma, Gang Wang<sup>*</sup>, Xiaoguang Liu<sup>*</sup>, Cheng Zhong, Wentong Cai</div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip hl">SIGKDD 2025</span><span class="badge a">CCF-A</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>ACM SIGKDD Conference on Knowledge Discovery and Data Mining</b>CCF-A · pp. 2725–2734</span></button></div>
+            <div class="p-venue"><span class="vchip hl" title="ACM SIGKDD Conference on Knowledge Discovery and Data Mining">SIGKDD 2025</span><span class="badge a">CCF-A</span></div>
             <div class="p-links"><a href="https://dl.acm.org/doi/10.1145/3711896.3737083" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/fahaihi/PMKLC" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
+          </div>
           </div>
         </li>
 
-        <li class="paper" data-tags="first,compression,ccfa">
+        <li class="paper has-thumb" data-tags="first,ccfa,compression">
+          <a class="p-thumb" href="images/papers/deepgeco.webp" aria-label="View framework figure"><img src="images/papers/thumb/deepgeco.webp" alt="Framework figure" loading="lazy"></a>
+          <div class="p-body">
           <div class="p-title">Genomics Data Lossless Compression with (s,k)-mer Encoding and Deep Neural Networks</div>
           <div class="p-authors"><b>Hui Sun</b><sup>†</sup>, Liping Yi<sup>†</sup>, Huidong Ma, Yongxia Sun, Yingfeng Zheng, Wenwen Cui, Meng Yan, Gang Wang<sup>*</sup>, Xiaoguang Liu<sup>*</sup></div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip hl">AAAI 2025</span><span class="badge a">CCF-A</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>AAAI Conference on Artificial Intelligence</b>CCF-A · pp. 12577–12585</span></button></div>
+            <div class="p-venue"><span class="vchip hl" title="AAAI Conference on Artificial Intelligence">AAAI 2025</span><span class="badge a">CCF-A</span></div>
             <div class="p-links"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/33371" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/fahaihi/DeepGeCo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
+          </div>
           </div>
         </li>
 
-        <li class="paper" data-tags="first,compression,hpc,ccfa">
+        <li class="paper has-thumb" data-tags="first,ccfa,compression">
+          <a class="p-thumb" href="images/papers/msdzip.webp" aria-label="View framework figure"><img src="images/papers/thumb/msdzip.webp" alt="Framework figure" loading="lazy"></a>
+          <div class="p-body">
           <div class="p-title">MSDZip: Universal Lossless Compression for Multi-source Data via Stepwise-parallel and Learning-based Prediction</div>
           <div class="p-authors">Huidong Ma<sup>†</sup>, <b>Hui Sun</b><sup>†</sup>, Liping Yi, Yanfeng Ding, Xiaoguang Liu<sup>*</sup>, Gang Wang<sup>*</sup></div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip hl">WWW 2025</span><span class="badge a">CCF-A</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>The Web Conference</b>CCF-A</span></button></div>
+            <div class="p-venue"><span class="vchip hl" title="The Web Conference">WWW 2025</span><span class="badge a">CCF-A</span></div>
             <div class="p-links"><a href="https://dl.acm.org/doi/10.1145/3696410.3714655" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/huidong-ma/MSDZip" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
           </div>
+  </div>
         </li>
 
         <li class="paper" data-tags="first,compression">
           <div class="p-title">Adaptive Lossless Compression for Genomics Data by Multiple (s,k)-mer Encoding and xLSTM</div>
           <div class="p-authors"><b>Hui Sun</b><sup>†</sup>, Yanfeng Ding<sup>†</sup>, Liping Yi, Huidong Ma, Haonan Xie, Gang Wang<sup>*</sup>, Xiaoguang Liu<sup>*</sup></div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">ICASSP 2025</span><span class="badge n">CCF-B</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>IEEE International Conference on Acoustics, Speech and Signal Processing</b>CCF-B</span></button></div>
+            <div class="p-venue"><span class="vchip" title="IEEE International Conference on Acoustics, Speech and Signal Processing">ICASSP 2025</span><span class="badge n">CCF-B</span></div>
             <div class="p-links"><a href="https://ieeexplore.ieee.org/abstract/document/10887721" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/dingyanfeng/AGDLC" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
           </div>
         </li>
 
-        <li class="paper" data-tags="compression,hpc">
+        <li class="paper" data-tags="compression">
           <div class="p-title">Multi-source Data Lossless Compression via Parallel Expansion Mapping and xLSTM</div>
           <div class="p-authors">Huidong Ma, <b>Hui Sun</b>, Liping Yi, Gang Wang<sup>*</sup>, Xiaoguang Liu<sup>*</sup></div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">ICASSP 2025</span><span class="badge n">CCF-B</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>IEEE International Conference on Acoustics, Speech and Signal Processing</b>CCF-B</span></button></div>
+            <div class="p-venue"><span class="vchip" title="IEEE International Conference on Acoustics, Speech and Signal Processing">ICASSP 2025</span><span class="badge n">CCF-B</span></div>
             <div class="p-links"><a href="https://ieeexplore.ieee.org/document/10889184" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/huidong-ma/MSDLC" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
           </div>
         </li>
 
-        <li class="paper" data-tags="first,compression,hpc,ccfa">
+        <li class="paper has-thumb" data-tags="first,ccfa,compression">
+          <a class="p-thumb" href="images/papers/pqsdc.webp" aria-label="View framework figure"><img src="images/papers/thumb/pqsdc.webp" alt="Framework figure" loading="lazy"></a>
+          <div class="p-body">
           <div class="p-title">PQSDC: A Parallel Lossless Compressor for Quality Scores Data via Sequences Partition and Run-Length Prediction Mapping</div>
           <div class="p-authors"><b>Hui Sun</b>, Yingfeng Zheng, Haonan Xie, Huidong Ma, Cheng Zhong, Meng Yan<sup>*</sup>, Xiaoguang Liu, Gang Wang</div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip hl">Bioinformatics 2024</span><span class="badge a">CCF-A</span><span class="badge n">JCR Q1</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>Bioinformatics</b>CCF-A · JCR Q1 · Vol. 40(5), btae323</span></button></div>
+            <div class="p-venue"><span class="vchip hl" title="Bioinformatics">Bioinformatics 2024</span><span class="badge a">CCF-A</span><span class="badge n">JCR Q1</span></div>
             <div class="p-links"><a href="https://doi.org/10.1093/bioinformatics/btae323" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/fahaihi/PQSDC" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
+          </div>
           </div>
         </li>
 
@@ -382,7 +434,7 @@
           <div class="p-title">A Survey and Benchmark Evaluation for Neural-Network-Based Lossless Universal Compressors Toward Multi-Source Data</div>
           <div class="p-authors"><b>Hui Sun</b><sup>†</sup>, Huidong Ma<sup>†</sup>, Feng Ling, Haonan Xie, Yongxia Sun, Liping Yi, Meng Yan<sup>*</sup>, Cheng Zhong, Xiaoguang Liu, Gang Wang<sup>*</sup></div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">FCS 2025</span><span class="badge n">CCF-B</span><span class="badge n">JCR Q1</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>Frontiers of Computer Science</b>CCF-B · JCR Q1 · 19(7): 1–16</span></button></div>
+            <div class="p-venue"><span class="vchip" title="Frontiers of Computer Science">FCS 2025</span><span class="badge n">CCF-B</span><span class="badge n">JCR Q1</span></div>
             <div class="p-links"><a href="https://link.springer.com/article/10.1007/s11704-024-40300-5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/fahaihi/NNLCB" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
           </div>
         </li>
@@ -391,7 +443,7 @@
           <div class="p-title">LRCB: A Comprehensive Benchmark Evaluation of Reference-free Lossless Compression Tools for Genomics Sequencing Long Reads Data</div>
           <div class="p-authors"><b>Hui Sun</b><sup>†</sup>, Huidong Ma<sup>†</sup>, Yingfeng Zheng, Haonan Xie, Cheng Zhong, Xiaoguang Liu<sup>*</sup>, Gang Wang<sup>*</sup></div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">DCC 2024</span><span class="badge n">CCF-B</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>Data Compression Conference</b>CCF-B · p. 584</span></button></div>
+            <div class="p-venue"><span class="vchip" title="Data Compression Conference">DCC 2024</span><span class="badge n">CCF-B</span></div>
             <div class="p-links"><a href="https://ieeexplore.ieee.org/abstract/document/10533699" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/fahaihi/LRCB" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
           </div>
         </li>
@@ -400,32 +452,35 @@
           <div class="p-title">融合聚类和卷积神经网络的原理图美观度评价算法</div>
           <div class="p-authors"><b>孙辉</b>, 丁延锋, 王刚<sup>*</sup>, 李桢荣</div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">华中科技大学学报 2024</span><span class="badge n">EI</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>华中科技大学学报（自然科学版）</b>EI</span></button></div>
+            <div class="p-venue"><span class="vchip" title="华中科技大学学报（自然科学版）">华中科技大学学报 2024</span><span class="badge n">EI</span></div>
           </div>
         </li>
 
-        <li class="paper" data-tags="first,hpc,ccfa">
+        <li class="paper has-thumb" data-tags="first,ccfa,hpc">
+          <a class="p-thumb" href="images/papers/txxb.webp" aria-label="View framework figure"><img src="images/papers/thumb/txxb.webp" alt="Framework figure" loading="lazy"></a>
+          <div class="p-body">
           <div class="p-title">高错误率长序列基因组数据敏感序列识别并行算法</div>
           <div class="p-authors">钟诚, <b>孙辉</b><sup>*</sup></div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip hl">通信学报 2023</span><span class="badge a">CCF-A（中文）</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>通信学报</b>CCF-A（中文）· 44(2): 160–171</span></button></div>
+            <div class="p-venue"><span class="vchip hl" title="通信学报">通信学报 2023</span><span class="badge a">CCF-A（中文）</span></div>
           </div>
+  </div>
         </li>
 
-        <li class="paper" data-tags="first,compression,hpc">
+        <li class="paper" data-tags="first,compression">
           <div class="p-title">SR2C: A Structurally Redundant Short Reads Collapser for Optimizing DNA Data Compression</div>
           <div class="p-authors"><b>Hui Sun</b><sup>†</sup>, Huidong Ma<sup>†</sup>, Yingfeng Zheng<sup>†</sup>, Haonan Xie, Xiaofei Wang, Xiaoguang Liu<sup>*</sup>, Gang Wang<sup>*</sup></div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">ICPADS 2023</span><span class="badge n">CCF-C</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>IEEE International Conference on Parallel and Distributed Systems</b>CCF-C</span></button></div>
+            <div class="p-venue"><span class="vchip" title="IEEE International Conference on Parallel and Distributed Systems">ICPADS 2023</span><span class="badge n">CCF-C</span></div>
             <div class="p-links"><a href="https://ieeexplore.ieee.org/document/10476304" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/fahaihi/SR2C" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
           </div>
         </li>
 
-        <li class="paper" data-tags="first,compression,hpc">
+        <li class="paper" data-tags="first,compression">
           <div class="p-title">PMFFRC: A Large-Scale Genomic Short Reads Compression Optimizer via Memory Modeling and Redundant Clustering</div>
           <div class="p-authors"><b>Hui Sun</b>, Yingfeng Zheng, Haonan Xie, Huidong Ma, Xiaoguang Liu<sup>*</sup>, Gang Wang<sup>*</sup></div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">BMC Bioinformatics 2023</span><span class="badge n">CCF-C</span><span class="badge n">JCR Q1</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>BMC Bioinformatics</b>CCF-C · JCR Q1</span></button></div>
+            <div class="p-venue"><span class="vchip" title="BMC Bioinformatics">BMC Bioinformatics 2023</span><span class="badge n">CCF-C</span><span class="badge n">JCR Q1</span></div>
             <div class="p-links"><a href="https://link.springer.com/article/10.1186/s12859-023-05566-9" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
           </div>
         </li>
@@ -434,7 +489,7 @@
           <div class="p-title">融合过滤和相似度计算的高错误率基因组数据敏感序列识别</div>
           <div class="p-authors"><b>孙辉</b>, 钟诚<sup>*</sup></div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">小型微型计算机系统 2022</span><span class="badge n">CCF-B（中文）</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>小型微型计算机系统</b>CCF-B（中文）</span></button></div>
+            <div class="p-venue"><span class="vchip" title="小型微型计算机系统">小型微型计算机系统 2022</span><span class="badge n">CCF-B（中文）</span></div>
           </div>
         </li>
 
@@ -442,7 +497,7 @@
           <div class="p-title">Prosumer Full Lifecycle Sustainable Footprint Painting for Circular Economy and Community-based Virtual Power Plant: A Multi-objective Optimization Research</div>
           <div class="p-authors">Haonan Xie, <b>Hui Sun</b>, Huan Liu, Tingting He, Hui Hwang Goh, Dongdong Zhang, Wei Dai, Tonni Agustiono Kurniawan, Shen Yuong Wong, Yee Wai Sim</div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">PSEP 2025</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>Process Safety and Environmental Protection</b>107728</span></button></div>
+            <div class="p-venue"><span class="vchip" title="Process Safety and Environmental Protection">PSEP 2025</span></div>
             <div class="p-links"><a href="https://www.sciencedirect.com/science/article/pii/S0957582025009954" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
           </div>
         </li>
@@ -451,7 +506,7 @@
           <div class="p-title">Eco-Energetical Analysis of Circular Economy and Community-based Virtual Power Plants (CE-cVPP)</div>
           <div class="p-authors">Haonan Xie, Hui Hwang Goh<sup>*</sup>, Dongdong Zhang<sup>*</sup>, <b>Hui Sun</b>, et al.</div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">Applied Energy 2024</span><span class="badge n">JCR Q1</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>Applied Energy</b>JCR Q1</span></button></div>
+            <div class="p-venue"><span class="vchip" title="Applied Energy">Applied Energy 2024</span><span class="badge n">JCR Q1</span></div>
           </div>
         </li>
 
@@ -459,7 +514,7 @@
           <div class="p-title">The Integration of Supercritical and Reheating Rankine Cycles in Advanced Thermal Energy Systems for Extreme Weather Adaptation</div>
           <div class="p-authors">Haonan Xie, <b>Hui Sun</b>, Dongdong Zhang, Shen Yuong Wong, Hui Hwang Goh</div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">ICAE 2024</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>International Conference on Applied Energy</b>Energy Proceedings</span></button></div>
+            <div class="p-venue"><span class="vchip" title="International Conference on Applied Energy">ICAE 2024</span></div>
             <div class="p-links"><a href="https://www.energy-proceedings.org/wp-content/uploads/icae2024/1727672503.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
           </div>
         </li>
@@ -468,7 +523,7 @@
           <div class="p-title">ricME: Long-Read Based Mobile Element Variant Detection Using Sequence Realignment and Identity Calculation</div>
           <div class="p-authors">Huidong Ma, Cheng Zhong<sup>*</sup>, <b>Hui Sun</b>, Danyang Chen, Haixiang Lin</div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">ISBRA 2023</span><span class="badge n">CCF-C</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>International Symposium on Bioinformatics Research and Applications</b>CCF-C</span></button></div>
+            <div class="p-venue"><span class="vchip" title="International Symposium on Bioinformatics Research and Applications">ISBRA 2023</span><span class="badge n">CCF-C</span></div>
             <div class="p-links"><a href="https://link.springer.com/chapter/10.1007/978-981-99-7074-2_13" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/huidong-ma/ricME" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
           </div>
         </li>
@@ -477,7 +532,7 @@
           <div class="p-title">Wireless Energy: Paving the Way for Smart Cities and a Greener Future</div>
           <div class="p-authors">Haonan Xie, Renhao Huang, <b>Hui Sun</b>, et al., Dongdong Zhang<sup>*</sup>, Hui Hwang Goh<sup>*</sup></div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">Energy and Buildings 2023</span><span class="badge n">JCR Q1</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>Energy and Buildings</b>JCR Q1</span></button></div>
+            <div class="p-venue"><span class="vchip" title="Energy and Buildings">Energy and Buildings 2023</span><span class="badge n">JCR Q1</span></div>
           </div>
         </li>
 
@@ -485,14 +540,14 @@
           <div class="p-title">多维度评价科技工作责任主体信用模型与算法</div>
           <div class="p-authors">唐印浒, 刘峻<sup>*</sup>, 王淋, <b>孙辉</b>, 赵凤娇, 钟诚</div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">广西大学学报 2021</span><span class="badge n">CSCD</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>广西大学学报（自然科学版）</b>CSCD</span></button></div>
+            <div class="p-venue"><span class="vchip" title="广西大学学报（自然科学版）">广西大学学报 2021</span><span class="badge n">CSCD</span></div>
           </div>
         </li>
         <li class="paper" data-tags="other">
           <div class="p-title">COVID-19 Epidemic Situation, the Outbreak Peak and Cycle Centered on China's No-Drug Control Actions: A Modeling Study</div>
           <div class="p-authors">Haonan Xie, <b>Hui Sun</b>, Wei Dai, Hui Hwang Goh, Dongdong Zhang, Feng Shuang, Thomas Wu, Xianhao Fan</div>
           <div class="p-foot">
-            <div class="p-venue"><span class="vchip">SSRN 2020</span><button class="tip" aria-label="Venue info">?<span class="bubble"><b>SSRN preprint 3720780</b></span></button></div>
+            <div class="p-venue"><span class="vchip" title="SSRN preprint 3720780">SSRN 2020</span></div>
             <div class="p-links"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3720780" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
           </div>
         </li>
@@ -553,7 +608,7 @@
       </ul>
       <h3>Patents &amp; Software Copyrights</h3>
       <ul class="plain">
-        <li>A Heuristic Layout and Routing Method for Circuit Schematic Diagrams <span class="y">· CN117057302A</span></li>
+        <li>A Heuristic Layout and Routing Method for Circuit Schematic Diagrams <span class="y">· CN117057302A · 2nd</span></li>
         <li>Method for Evaluating the Aesthetics Level of Circuit Layout, Routing, and Schematic Diagram <span class="y">· CN117058096A · 2nd</span></li>
         <li>A Parallel Optimization Method for High-Throughput Genomics Sequencing Reads Data Compression <span class="y">· CN117059181A · 2nd</span></li>
         <li>A Parallel Compression Method for High-Throughput Genomic Sequencing Quality Score Data <span class="y">· CN117133365A · 2nd</span></li>
@@ -563,6 +618,7 @@
     </section>
 
     <footer>© 2026 Sun Hui · Last updated Oct 2026</footer>
+  <div class="lightbox" id="lightbox" hidden><img alt="Framework figure"></div>
   </main>
 </div>
 
@@ -592,17 +648,52 @@
       p.hidden=!ok; if(ok)shown++;
     });
     document.getElementById('empty').hidden=shown>0;
-    hint.innerHTML=topic?'Showing <b>'+shown+'</b> of '+papers.length+' papers'
+    // Thumbnails only in the Selected view; category views stay a compact list
+    list.classList.toggle('compact',!!topic);
+    var cur=document.querySelector('.chip[data-topic="'+topic+'"]');
+    hint.innerHTML=topic?'<b>'+cur.firstChild.textContent+'</b> · '+shown+' of '+papers.length+' papers'
       :'Showing <b>CCF-A papers</b> and <b>industry tech reports</b> · pick a category to see all&nbsp;'+papers.length;
     toggle.setAttribute('aria-pressed',String(firstOnly));
     chips.forEach(function(c){c.setAttribute('aria-pressed',String(c.dataset.topic===topic))});
   }
   toggle.addEventListener('click',function(){firstOnly=!firstOnly;apply()});
-  chips.forEach(function(c){c.addEventListener('click',function(){topic=c.dataset.topic;apply()})});
-  document.querySelectorAll('.tip').forEach(function(t){
-    t.addEventListener('click',function(e){e.stopPropagation();var o=t.classList.contains('open');document.querySelectorAll('.tip.open').forEach(function(x){x.classList.remove('open')});if(!o)t.classList.add('open')});
+  chips.forEach(function(c){
+    var t=topic;topic=c.dataset.topic;
+    var n=Array.prototype.filter.call(papers,function(p){return inTopic(p.dataset.tags.split(','))}).length;
+    topic=t;
+    c.insertAdjacentHTML('beforeend','<span class="n">'+n+'</span>');
+    c.addEventListener('click',function(){
+      topic=c.dataset.topic;apply();
+      list.classList.remove('fade');void list.offsetWidth;list.classList.add('fade');
+      var f=document.getElementById('filters');if(f.getBoundingClientRect().top<60)f.scrollIntoView({behavior:'smooth',block:'start'});
+    });
   });
-  document.addEventListener('click',function(){document.querySelectorAll('.tip.open').forEach(function(x){x.classList.remove('open')})});
+  // News: show the latest 6 items, scroll for the rest
+  var ns=document.getElementById('news-scroll'),items=ns.querySelectorAll('li');
+  function fitNews(){
+    if(items.length<=6){ns.style.maxHeight='';return}
+    ns.style.maxHeight=(items[5].offsetTop+items[5].offsetHeight-items[0].offsetTop+16)+'px';
+    ns.classList.toggle('more',ns.scrollTop+ns.clientHeight<ns.scrollHeight-4);
+  }
+  ns.addEventListener('scroll',function(){ns.classList.toggle('more',ns.scrollTop+ns.clientHeight<ns.scrollHeight-4)});
+  window.addEventListener('resize',fitNews);fitNews();
+  // Highlight the nav item of the section in view
+  var navs=document.querySelectorAll('.topnav nav a[href^="#"]');
+  function spy(){
+    var cur='';
+    navs.forEach(function(a){var t=document.querySelector(a.getAttribute('href'));if(t&&t.getBoundingClientRect().top<120)cur=a.getAttribute('href')});
+    if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-2)cur=navs[navs.length-1].getAttribute('href');
+    navs.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')===cur)});
+  }
+  window.addEventListener('scroll',spy,{passive:true});spy();
+  // Drop "Upcoming" labels once the date has passed
+  document.querySelectorAll('.soon[data-until]').forEach(function(el){if(new Date()>=new Date(el.dataset.until))el.remove()});
+  var lb=document.getElementById('lightbox');
+  document.querySelectorAll('.p-thumb').forEach(function(a){a.addEventListener('click',function(e){
+    e.preventDefault(); lb.querySelector('img').src=a.getAttribute('href'); lb.hidden=false;
+  })});
+  lb.addEventListener('click',function(){lb.hidden=true});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.hidden=true});
   apply();
 })();
 </script>
