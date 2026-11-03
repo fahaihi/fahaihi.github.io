@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sun Hui (孙辉)</title>
-  <meta name="description" content="LLM Researcher at Shopee. Ph.D., Nankai University. Research: AI4Compression, HPC, Time-Series LLMs.">
+  <meta name="description" content="LLM Researcher at Shopee. Ph.D., Nankai University. Research: Code LLMs & Agents, AI4Compression, HPC.">
   <meta property="og:title" content="Sun Hui (孙辉)">
-  <meta property="og:description" content="LLM Researcher at Shopee. Ph.D., Nankai University. Research: AI4Compression, HPC, Time-Series LLMs.">
+  <meta property="og:description" content="LLM Researcher at Shopee. Ph.D., Nankai University. Research: Code LLMs & Agents, AI4Compression, HPC.">
   <meta property="og:url" content="https://huisun.top/">
   <meta property="og:image" content="https://huisun.top/images/sh_profile.jpeg">
   <meta name="google-site-verification" content="b_BbOIt7d513ZXYDw-YRMicO6O5tthYiouqWDdWjGTU">
@@ -22,8 +22,10 @@
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWFCX99KQZ"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SWFCX99KQZ');</script>
+  <script>(function(){var l=new URLSearchParams(location.search).get('lang');try{l=l||localStorage.getItem('lang')}catch(e){}if(l==='zh'){document.documentElement.dataset.lang='zh';document.documentElement.lang='zh-CN'}})();</script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html[data-lang="en"] .i-zh,html[data-lang="zh"] .i-en{display:none!important}
     :root{
       --bg:#ffffff;--card:#ffffff;--chip:#f3f4f6;
       --text:#1f2937;--muted:#4b5563;--hint:#9ca3af;
@@ -51,7 +53,9 @@
     /* top nav */
     .topnav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
     .topnav .in{max-width:1280px;margin:0 auto;padding:0 32px;height:52px;display:flex;align-items:center;gap:36px}
-    .brand{font-weight:600;font-size:15px}
+    .brand{font-weight:600;font-size:15px;white-space:nowrap}
+    .lang{margin-left:auto;flex-shrink:0;font:500 13px/1 var(--sans);padding:6px 12px;border-radius:99px;border:1px solid var(--rule);background:var(--card);color:var(--text);cursor:pointer;transition:border-color .15s,color .15s}
+    .lang:hover{border-color:var(--accent);color:var(--accent)}
     .topnav nav{display:flex;gap:24px;font-size:14px;color:var(--muted);overflow-x:auto;scrollbar-width:none}
     .topnav nav::-webkit-scrollbar{display:none}
     .topnav nav a{white-space:nowrap;transition:color .15s}
@@ -181,15 +185,16 @@
 
 <header class="topnav">
   <div class="in">
-    <a class="brand" href="#top">Dr. Sun Hui</a>
+    <a class="brand" href="#top"><span class="i-en">Dr. Sun Hui</span><span class="i-zh">孙辉 博士</span></a>
     <nav>
-      <a href="#about">About</a>
-      <a href="#news">News</a>
-      <a href="#publications">Publications</a>
-      <a href="#talks">Talks</a>
-      <a href="#service">Service</a>
-      <a href="#honors">Honors</a>
+      <a href="#about"><span class="i-en">About</span><span class="i-zh">简介</span></a>
+      <a href="#news"><span class="i-en">News</span><span class="i-zh">动态</span></a>
+      <a href="#publications"><span class="i-en">Publications</span><span class="i-zh">论文</span></a>
+      <a href="#talks"><span class="i-en">Talks</span><span class="i-zh">报告</span></a>
+      <a href="#service"><span class="i-en">Service</span><span class="i-zh">学术服务</span></a>
+      <a href="#honors"><span class="i-en">Honors</span><span class="i-zh">荣誉</span></a>
     </nav>
+    <button class="lang" id="lang-btn" type="button" aria-label="Switch language"><span class="i-en">中文</span><span class="i-zh">EN</span></button>
   </div>
 </header>
 
@@ -198,10 +203,10 @@
   <!-- ── Sidebar ── -->
   <aside>
     <img class="avatar" src="images/sh_profile.jpeg" alt="Portrait of Sun Hui">
-    <div class="side-name">Dr. Sun Hui</div>
-    <div class="side-aff">LLM Researcher, Shopee<br><span class="side-loc">Beijing, China</span></div>
+    <div class="side-name"><span class="i-en">Dr. Sun Hui</span><span class="i-zh">孙辉 博士</span></div>
+    <div class="side-aff"><span class="i-en">LLM Researcher, Shopee</span><span class="i-zh">Shopee 大模型研究员</span><br><span class="side-loc"><span class="i-en">Beijing, China</span><span class="i-zh">中国 · 北京</span></span></div>
     <ul class="side-links">
-      <li><a href="mailto:adairmillersh@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>Email</a></li>
+      <li><a href="mailto:adairmillersh@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg><span class="i-en">Email</span><span class="i-zh">邮箱</span></a></li>
       <li><a href="https://scholar.google.com/citations?user=YcDCx94AAAAJ&hl=en" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 1 9l11 6 9-4.91V17M5 13.18v4L12 21l7-3.82v-4"/></svg>Google Scholar</a></li>
       <li><a href="https://orcid.org/0000-0003-0290-142X" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>ORCID</a></li>
       <li><a href="https://github.com/fahaihi" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>GitHub</a></li>
@@ -213,45 +218,48 @@
 
     <!-- ── Biography ── -->
     <section id="about">
-      <h2>Biography</h2>
-      <p class="bio">
+      <h2><span class="i-en">Biography</span><span class="i-zh">个人简介</span></h2>
+      <p class="bio i-en">
         I am an LLM Researcher at <b class="org"><img src="images/logos/sea.png" alt="" aria-hidden="true">Sea Group</b>, <b class="org"><img src="images/logos/shopee.png" alt="" aria-hidden="true">Shopee LLM Team</b>. I received my Ph.D. in Computer Science from <b class="org"><img src="images/logos/nankai.png" alt="" aria-hidden="true">Nankai University</b>, jointly trained with <b class="org"><img src="images/logos/ntu.png" alt="" aria-hidden="true">Nanyang Technological University</b>, Singapore, as a member of the Nankai-Baidu Joint Lab (NBJL).
         I was previously a research intern at <b class="org"><img src="images/logos/microsoft.png" alt="" aria-hidden="true">Microsoft Research Asia</b>, working on time-series LLMs.
         My research interests include <b>Code LLMs &amp; Agents</b>, <b>AI for Data Compression</b>, and <b>High-Performance Computing</b>,
         with 30 publications at venues including KDD, AAAI, WWW, ACL, CVPR and <i>Bioinformatics</i>.
         Most of my tools are open-sourced on <a href="https://github.com/fahaihi" target="_blank" rel="noopener">GitHub</a>. Please feel free to reach out if you are interested in my research.
       </p>
+      <p class="bio i-zh">
+        我是 <b class="org"><img src="images/logos/sea.png" alt="" aria-hidden="true">Sea 集团</b> <b class="org"><img src="images/logos/shopee.png" alt="" aria-hidden="true">Shopee LLM 团队</b> 的大模型研究员。博士毕业于<b class="org"><img src="images/logos/nankai.png" alt="" aria-hidden="true">南开大学</b>计算机科学专业，期间在新加坡<b class="org"><img src="images/logos/ntu.png" alt="" aria-hidden="true">南洋理工大学</b>联合培养，是南开-百度联合实验室（NBJL）成员。此前曾在<b class="org"><img src="images/logos/microsoft.png" alt="" aria-hidden="true">微软亚洲研究院</b>实习，从事时间序列大模型研究。我的研究方向包括 <b>Code LLM 与智能体</b>、<b>AI 数据压缩</b>和<b>高性能计算</b>，已在 KDD、AAAI、WWW、ACL、CVPR 和 <i>Bioinformatics</i> 等会议与期刊发表论文 30 篇。我的大部分工具已在 <a href="https://github.com/fahaihi" target="_blank" rel="noopener">GitHub</a> 开源，欢迎对我的研究感兴趣的朋友联系交流。
+      </p>
     </section>
 
     <!-- ── News ── -->
     <section id="news">
-      <h2>News</h2>
+      <h2><span class="i-en">News</span><span class="i-zh">新闻动态</span></h2>
       <div class="news-scroll" id="news-scroll">
       <ul class="news">
-        <li><time>2026.11</time>🎤 Invited talk at Asian Transplantation Week (ATW) 2026, Busan, Korea.<span class="soon" data-until="2026-11-15">Upcoming</span></li>
-        <li><time>2026.07</time>💼 Joined Sea Group as an LLM Researcher in the Shopee LLM Team, Beijing.</li>
-        <li><time>2026.05</time>🎉 Two papers are accepted by ACL 2026 (including 1 Oral).</li>
-        <li><time>2026.02</time>🎉 One paper is accepted by CVPR 2026.</li>
-        <li><time>2026.01</time>📄 ChatAD (work done at MSRA) is released on arXiv.</li>
-        <li><time>2025.10</time>💼 Joined Microsoft Research Asia as a research intern.</li>
-        <li><time>2025.07</time>🎉 PMKLC is accepted by SIGKDD 2025 (Oral).</li>
+        <li><time>2026.11</time><span class="i-en">🎤 Invited talk at Asian Transplantation Week (ATW) 2026, Busan, Korea.</span><span class="i-zh">🎤 受邀在 2026 亚洲移植周（ATW，韩国釜山）作特邀报告。</span><span class="soon" data-until="2026-11-15"><span class="i-en">Upcoming</span><span class="i-zh">即将进行</span></span></li>
+        <li><time>2026.07</time><span class="i-en">💼 Joined Sea Group as an LLM Researcher in the Shopee LLM Team, Beijing.</span><span class="i-zh">💼 加入 Sea 集团 Shopee LLM 团队（北京），任大模型研究员。</span></li>
+        <li><time>2026.05</time><span class="i-en">🎉 Two papers are accepted by ACL 2026 (including 1 Oral).</span><span class="i-zh">🎉 两篇论文被 ACL 2026 录用（其中 1 篇 Oral）。</span></li>
+        <li><time>2026.02</time><span class="i-en">🎉 One paper is accepted by CVPR 2026.</span><span class="i-zh">🎉 一篇论文被 CVPR 2026 录用。</span></li>
+        <li><time>2026.01</time><span class="i-en">📄 ChatAD (work done at MSRA) is released on arXiv.</span><span class="i-zh">📄 ChatAD（微软亚洲研究院实习期间工作）在 arXiv 发布。</span></li>
+        <li><time>2025.10</time><span class="i-en">💼 Joined Microsoft Research Asia as a research intern.</span><span class="i-zh">💼 加入微软亚洲研究院任研究实习生。</span></li>
+        <li><time>2025.07</time><span class="i-en">🎉 PMKLC is accepted by SIGKDD 2025 (Oral).</span><span class="i-zh">🎉 PMKLC 被 SIGKDD 2025 录用（Oral）。</span></li>
       </ul>
       </div>
     </section>
 
     <!-- ── Publications ── -->
     <section id="publications">
-      <h2>Publications</h2>
+      <h2><span class="i-en">Publications</span><span class="i-zh">发表论文</span></h2>
       <div class="filters" id="filters">
-        <button class="chip" data-topic="" aria-pressed="true">Selected</button>
-        <button class="chip" data-topic="techreport" aria-pressed="false">Industry Tech Reports</button>
-        <button class="chip" data-topic="llm" aria-pressed="false">LLM &amp; Agent</button>
-        <button class="chip" data-topic="compression" aria-pressed="false">AI4Compression</button>
-        <button class="chip" data-topic="hpc" aria-pressed="false">High Performance Computing</button>
-        <button class="chip" data-topic="other" aria-pressed="false">Others</button>
-        <button class="chip" data-topic="all" aria-pressed="false">All</button>
+        <button class="chip" data-topic="" aria-pressed="true"><span class="i-en">Selected</span><span class="i-zh">精选</span></button>
+        <button class="chip" data-topic="techreport" aria-pressed="false"><span class="i-en">Industry Tech Reports</span><span class="i-zh">企业技术报告</span></button>
+        <button class="chip" data-topic="llm" aria-pressed="false"><span class="i-en">LLM &amp; Agent</span><span class="i-zh">大模型与智能体</span></button>
+        <button class="chip" data-topic="compression" aria-pressed="false"><span class="i-en">AI4Compression</span><span class="i-zh">AI4Compression</span></button>
+        <button class="chip" data-topic="hpc" aria-pressed="false"><span class="i-en">High Performance Computing</span><span class="i-zh">高性能计算</span></button>
+        <button class="chip" data-topic="other" aria-pressed="false"><span class="i-en">Others</span><span class="i-zh">其他</span></button>
+        <button class="chip" data-topic="all" aria-pressed="false"><span class="i-en">All</span><span class="i-zh">全部</span></button>
       </div>
-      <div class="meta"><p class="hint" id="hint"></p><button class="toggle" id="first-toggle" aria-pressed="false"><span class="sw"></span>First / Corresponding Author</button></div>
+      <div class="meta"><p class="hint" id="hint"></p><button class="toggle" id="first-toggle" aria-pressed="false"><span class="sw"></span><span class="i-en">First / Corresponding Author</span><span class="i-zh">一作 / 通讯作者</span></button></div>
 
       <!-- data-tags: "first" = first / co-first / corresponding author; "ccfa" + "techreport" make up the default Selected view; other tags match the chips above -->
       <ul class="papers" id="papers">
@@ -263,7 +271,7 @@
           <div class="p-authors">Yuanze Xu, Tianzhu Ye, <b>Hui Sun</b>, Wenhui Wang, Li Dong, Furu Wei</div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip" title="arXiv preprint 2610.25651">arXiv 2026</span><span class="badge a">Tech Report</span></div>
-            <div class="p-links"><a href="https://arxiv.org/abs/2610.25651" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
+            <div class="p-links"><a href="https://arxiv.org/abs/2610.25651" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a></div>
           </div>
           </div>
         </li>
@@ -275,7 +283,7 @@
           <div class="p-authors">Xu Zhang, Chang Xu, <b>Hui Sun</b>, Nan Ma, Zijian Zhang, Peng Wang, Wei Wang, Li Zhao</div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip" title="arXiv preprint 2608.10149">arXiv 2026</span><span class="badge a">Tech Report</span></div>
-            <div class="p-links"><a href="https://arxiv.org/abs/2608.10149" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
+            <div class="p-links"><a href="https://arxiv.org/abs/2608.10149" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a></div>
           </div>
           </div>
         </li>
@@ -285,7 +293,7 @@
           <div class="p-authors"><b>Hui Sun</b>, Jiashun Chen, Huidong Ma, Xiantong Luo, Chang Xu, Haonan Xie, Lizheng Zu, Qi Ming, Xiaoguang Liu, Gang Wang, Cheng Zhong, Wentong Cai</div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip" title="Preprint">Preprint</span></div>
-            <div class="p-links"><a href="https://www.researchgate.net/profile/Hui-Sun-84/publication/416431205_LLCBench_Benchmarking_Lossless_Compression_of_Large_Language_Models/links/6ad86edbe807b426879a88a9/LLCBench-Benchmarking-Lossless-Compression-of-Large-Language-Models.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/fahaihi/LLCBench" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
+            <div class="p-links"><a href="https://www.researchgate.net/profile/Hui-Sun-84/publication/416431205_LLCBench_Benchmarking_Lossless_Compression_of_Large_Language_Models/links/6ad86edbe807b426879a88a9/LLCBench-Benchmarking-Lossless-Compression-of-Large-Language-Models.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a><a href="https://github.com/fahaihi/LLCBench" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg><span class="i-en">Code</span><span class="i-zh">代码</span></a></div>
           </div>
         </li>
 
@@ -296,7 +304,7 @@
           <div class="p-authors"><b>Hui Sun</b><sup>*</sup>, Chang Xu<sup>†</sup>, Haonan Xie, Hao Li, Yuhao Huang, Chuheng Zhang, Ming Jin, Xiaoguang Liu, Gang Wang, Jiang Bian</div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip" title="arXiv preprint 2601.13546">arXiv 2026</span><span class="badge a">Tech Report</span></div>
-            <div class="p-links"><a href="https://arxiv.org/abs/2601.13546" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
+            <div class="p-links"><a href="https://arxiv.org/abs/2601.13546" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a></div>
           </div>
           </div>
         </li>
@@ -308,7 +316,7 @@
           <div class="p-authors"><b>Hui Sun</b><sup>†</sup>, Yanfeng Ding<sup>†</sup>, Huidong Ma, Chang Xu, Keyan Jin, Lizheng Zu, Cheng Zhong, Xiaoguang Liu<sup>*</sup>, Gang Wang<sup>*</sup>, Wentong Cai</div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip hl" title="Annual Meeting of the Association for Computational Linguistics">ACL 2026</span><span class="badge a">CCF-A</span></div>
-            <div class="p-links"><a href="https://arxiv.org/abs/2601.13559" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
+            <div class="p-links"><a href="https://arxiv.org/abs/2601.13559" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a></div>
           </div>
           </div>
         </li>
@@ -320,7 +328,7 @@
           <div class="p-authors">Huidong Ma, Xinyan Shi, <b>Hui Sun</b>, Xiaofei Yue, Xiaoguang Liu<sup>*</sup>, Gang Wang<sup>*</sup>, Wentong Cai</div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip hl" title="Annual Meeting of the Association for Computational Linguistics">ACL 2026</span><span class="badge oral">Oral</span><span class="badge a">CCF-A</span></div>
-            <div class="p-links"><a href="https://aclanthology.org/2026.acl-long.324/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/huidong-ma/FADE" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
+            <div class="p-links"><a href="https://aclanthology.org/2026.acl-long.324/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a><a href="https://github.com/huidong-ma/FADE" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg><span class="i-en">Code</span><span class="i-zh">代码</span></a></div>
           </div>
           </div>
         </li>
@@ -332,7 +340,7 @@
           <div class="p-authors">Huidong Ma, Xinyan Shi, <b>Hui Sun</b><sup>*</sup>, Xiaofei Yue, Xiaoguang Liu<sup>*</sup>, Gang Wang<sup>*</sup>, Wentong Cai</div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip hl" title="IEEE/CVF Conference on Computer Vision and Pattern Recognition">CVPR 2026</span><span class="badge a">CCF-A</span></div>
-            <div class="p-links"><a href="https://openaccess.thecvf.com/content/CVPR2026/html/Ma_Learned_Image_Compression_via_Sparse_Attention_and_Adaptive_Frequency_CVPR_2026_paper.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/huidong-ma/SAAF" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
+            <div class="p-links"><a href="https://openaccess.thecvf.com/content/CVPR2026/html/Ma_Learned_Image_Compression_via_Sparse_Attention_and_Adaptive_Frequency_CVPR_2026_paper.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a><a href="https://github.com/huidong-ma/SAAF" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg><span class="i-en">Code</span><span class="i-zh">代码</span></a></div>
           </div>
           </div>
         </li>
@@ -342,7 +350,7 @@
           <div class="p-authors">Wenfeng Du, Chunyan Tang, Guanghong Liu, <b>Hui Sun</b>, Jinxiong Zhang, Cheng Zhong</div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip" title="Journal of Chemical Theory and Computation">JCTC 2026</span></div>
-            <div class="p-links"><a href="https://pubs.acs.org/doi/abs/10.1021/acs.jctc.5c02183" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
+            <div class="p-links"><a href="https://pubs.acs.org/doi/abs/10.1021/acs.jctc.5c02183" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a></div>
           </div>
         </li>
 
@@ -351,7 +359,7 @@
           <div class="p-authors">Lizheng Zu, Yaoqing Jin, Siyi Cao, Shiwei Suo, Haoxin Lyu, Song Fu, <b>Hui Sun</b>, Hao Zhang</div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip" title="IEEE International Conference on Acoustics, Speech and Signal Processing">ICASSP 2026</span><span class="badge n">CCF-B</span></div>
-            <div class="p-links"><a href="https://ieeexplore.ieee.org/abstract/document/11464718/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
+            <div class="p-links"><a href="https://ieeexplore.ieee.org/abstract/document/11464718/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a></div>
           </div>
         </li>
 
@@ -360,7 +368,7 @@
           <div class="p-authors">Qingrun Liu, Paibin Zhu, <b>Hui Sun</b>, Zhe Chen, Bing Shao</div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip" title="Trends in Food Science &amp; Technology">TIFS 2026</span></div>
-            <div class="p-links"><a href="https://www.sciencedirect.com/science/article/pii/S0924224426001044" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
+            <div class="p-links"><a href="https://www.sciencedirect.com/science/article/pii/S0924224426001044" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a></div>
           </div>
         </li>
 
@@ -371,7 +379,7 @@
           <div class="p-authors"><b>Hui Sun</b>, Yanfeng Ding, Liping Yi, Huidong Ma, Gang Wang<sup>*</sup>, Xiaoguang Liu<sup>*</sup>, Cheng Zhong, Wentong Cai</div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip hl" title="ACM SIGKDD Conference on Knowledge Discovery and Data Mining">SIGKDD 2025</span><span class="badge oral">Oral</span><span class="badge a">CCF-A</span></div>
-            <div class="p-links"><a href="https://dl.acm.org/doi/10.1145/3711896.3737083" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/fahaihi/PMKLC" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
+            <div class="p-links"><a href="https://dl.acm.org/doi/10.1145/3711896.3737083" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a><a href="https://github.com/fahaihi/PMKLC" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg><span class="i-en">Code</span><span class="i-zh">代码</span></a></div>
           </div>
           </div>
         </li>
@@ -383,7 +391,7 @@
           <div class="p-authors"><b>Hui Sun</b><sup>†</sup>, Liping Yi<sup>†</sup>, Huidong Ma, Yongxia Sun, Yingfeng Zheng, Wenwen Cui, Meng Yan, Gang Wang<sup>*</sup>, Xiaoguang Liu<sup>*</sup></div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip hl" title="AAAI Conference on Artificial Intelligence">AAAI 2025</span><span class="badge a">CCF-A</span></div>
-            <div class="p-links"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/33371" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/fahaihi/DeepGeCo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
+            <div class="p-links"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/33371" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a><a href="https://github.com/fahaihi/DeepGeCo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg><span class="i-en">Code</span><span class="i-zh">代码</span></a></div>
           </div>
           </div>
         </li>
@@ -395,7 +403,7 @@
           <div class="p-authors">Huidong Ma<sup>†</sup>, <b>Hui Sun</b><sup>†</sup>, Liping Yi, Yanfeng Ding, Xiaoguang Liu<sup>*</sup>, Gang Wang<sup>*</sup></div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip hl" title="The Web Conference">WWW 2025</span><span class="badge a">CCF-A</span></div>
-            <div class="p-links"><a href="https://dl.acm.org/doi/10.1145/3696410.3714655" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/huidong-ma/MSDZip" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
+            <div class="p-links"><a href="https://dl.acm.org/doi/10.1145/3696410.3714655" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a><a href="https://github.com/huidong-ma/MSDZip" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg><span class="i-en">Code</span><span class="i-zh">代码</span></a></div>
           </div>
   </div>
         </li>
@@ -405,7 +413,7 @@
           <div class="p-authors"><b>Hui Sun</b><sup>†</sup>, Yanfeng Ding<sup>†</sup>, Liping Yi, Huidong Ma, Haonan Xie, Gang Wang<sup>*</sup>, Xiaoguang Liu<sup>*</sup></div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip" title="IEEE International Conference on Acoustics, Speech and Signal Processing">ICASSP 2025</span><span class="badge n">CCF-B</span></div>
-            <div class="p-links"><a href="https://ieeexplore.ieee.org/abstract/document/10887721" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/dingyanfeng/AGDLC" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
+            <div class="p-links"><a href="https://ieeexplore.ieee.org/abstract/document/10887721" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a><a href="https://github.com/dingyanfeng/AGDLC" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg><span class="i-en">Code</span><span class="i-zh">代码</span></a></div>
           </div>
         </li>
 
@@ -414,7 +422,7 @@
           <div class="p-authors">Huidong Ma, <b>Hui Sun</b>, Liping Yi, Gang Wang<sup>*</sup>, Xiaoguang Liu<sup>*</sup></div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip" title="IEEE International Conference on Acoustics, Speech and Signal Processing">ICASSP 2025</span><span class="badge n">CCF-B</span></div>
-            <div class="p-links"><a href="https://ieeexplore.ieee.org/document/10889184" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/huidong-ma/MSDLC" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
+            <div class="p-links"><a href="https://ieeexplore.ieee.org/document/10889184" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a><a href="https://github.com/huidong-ma/MSDLC" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg><span class="i-en">Code</span><span class="i-zh">代码</span></a></div>
           </div>
         </li>
 
@@ -425,7 +433,7 @@
           <div class="p-authors"><b>Hui Sun</b>, Yingfeng Zheng, Haonan Xie, Huidong Ma, Cheng Zhong, Meng Yan<sup>*</sup>, Xiaoguang Liu, Gang Wang</div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip hl" title="Bioinformatics">Bioinformatics 2024</span><span class="badge a">CCF-A</span><span class="badge n">JCR Q1</span></div>
-            <div class="p-links"><a href="https://doi.org/10.1093/bioinformatics/btae323" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/fahaihi/PQSDC" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
+            <div class="p-links"><a href="https://doi.org/10.1093/bioinformatics/btae323" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a><a href="https://github.com/fahaihi/PQSDC" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg><span class="i-en">Code</span><span class="i-zh">代码</span></a></div>
           </div>
           </div>
         </li>
@@ -435,7 +443,7 @@
           <div class="p-authors"><b>Hui Sun</b><sup>†</sup>, Huidong Ma<sup>†</sup>, Feng Ling, Haonan Xie, Yongxia Sun, Liping Yi, Meng Yan<sup>*</sup>, Cheng Zhong, Xiaoguang Liu, Gang Wang<sup>*</sup></div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip" title="Frontiers of Computer Science">FCS 2025</span><span class="badge n">CCF-B</span><span class="badge n">JCR Q1</span></div>
-            <div class="p-links"><a href="https://link.springer.com/article/10.1007/s11704-024-40300-5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/fahaihi/NNLCB" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
+            <div class="p-links"><a href="https://link.springer.com/article/10.1007/s11704-024-40300-5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a><a href="https://github.com/fahaihi/NNLCB" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg><span class="i-en">Code</span><span class="i-zh">代码</span></a></div>
           </div>
         </li>
 
@@ -444,7 +452,7 @@
           <div class="p-authors"><b>Hui Sun</b><sup>†</sup>, Huidong Ma<sup>†</sup>, Yingfeng Zheng, Haonan Xie, Cheng Zhong, Xiaoguang Liu<sup>*</sup>, Gang Wang<sup>*</sup></div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip" title="Data Compression Conference">DCC 2024</span><span class="badge n">CCF-B</span></div>
-            <div class="p-links"><a href="https://ieeexplore.ieee.org/abstract/document/10533699" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/fahaihi/LRCB" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
+            <div class="p-links"><a href="https://ieeexplore.ieee.org/abstract/document/10533699" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a><a href="https://github.com/fahaihi/LRCB" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg><span class="i-en">Code</span><span class="i-zh">代码</span></a></div>
           </div>
         </li>
 
@@ -472,7 +480,7 @@
           <div class="p-authors"><b>Hui Sun</b><sup>†</sup>, Huidong Ma<sup>†</sup>, Yingfeng Zheng<sup>†</sup>, Haonan Xie, Xiaofei Wang, Xiaoguang Liu<sup>*</sup>, Gang Wang<sup>*</sup></div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip" title="IEEE International Conference on Parallel and Distributed Systems">ICPADS 2023</span><span class="badge n">CCF-C</span></div>
-            <div class="p-links"><a href="https://ieeexplore.ieee.org/document/10476304" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/fahaihi/SR2C" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
+            <div class="p-links"><a href="https://ieeexplore.ieee.org/document/10476304" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a><a href="https://github.com/fahaihi/SR2C" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg><span class="i-en">Code</span><span class="i-zh">代码</span></a></div>
           </div>
         </li>
 
@@ -481,7 +489,7 @@
           <div class="p-authors"><b>Hui Sun</b>, Yingfeng Zheng, Haonan Xie, Huidong Ma, Xiaoguang Liu<sup>*</sup>, Gang Wang<sup>*</sup></div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip" title="BMC Bioinformatics">BMC Bioinformatics 2023</span><span class="badge n">CCF-C</span><span class="badge n">JCR Q1</span></div>
-            <div class="p-links"><a href="https://link.springer.com/article/10.1186/s12859-023-05566-9" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
+            <div class="p-links"><a href="https://link.springer.com/article/10.1186/s12859-023-05566-9" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a></div>
           </div>
         </li>
 
@@ -498,7 +506,7 @@
           <div class="p-authors">Haonan Xie, <b>Hui Sun</b>, Huan Liu, Tingting He, Hui Hwang Goh, Dongdong Zhang, Wei Dai, Tonni Agustiono Kurniawan, Shen Yuong Wong, Yee Wai Sim</div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip" title="Process Safety and Environmental Protection">PSEP 2025</span></div>
-            <div class="p-links"><a href="https://www.sciencedirect.com/science/article/pii/S0957582025009954" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
+            <div class="p-links"><a href="https://www.sciencedirect.com/science/article/pii/S0957582025009954" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a></div>
           </div>
         </li>
 
@@ -515,7 +523,7 @@
           <div class="p-authors">Haonan Xie, <b>Hui Sun</b>, Dongdong Zhang, Shen Yuong Wong, Hui Hwang Goh</div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip" title="International Conference on Applied Energy">ICAE 2024</span></div>
-            <div class="p-links"><a href="https://www.energy-proceedings.org/wp-content/uploads/icae2024/1727672503.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
+            <div class="p-links"><a href="https://www.energy-proceedings.org/wp-content/uploads/icae2024/1727672503.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a></div>
           </div>
         </li>
 
@@ -524,7 +532,7 @@
           <div class="p-authors">Huidong Ma, Cheng Zhong<sup>*</sup>, <b>Hui Sun</b>, Danyang Chen, Haixiang Lin</div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip" title="International Symposium on Bioinformatics Research and Applications">ISBRA 2023</span><span class="badge n">CCF-C</span></div>
-            <div class="p-links"><a href="https://link.springer.com/chapter/10.1007/978-981-99-7074-2_13" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a><a href="https://github.com/huidong-ma/ricME" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>Code</a></div>
+            <div class="p-links"><a href="https://link.springer.com/chapter/10.1007/978-981-99-7074-2_13" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a><a href="https://github.com/huidong-ma/ricME" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg><span class="i-en">Code</span><span class="i-zh">代码</span></a></div>
           </div>
         </li>
 
@@ -548,31 +556,34 @@
           <div class="p-authors">Haonan Xie, <b>Hui Sun</b>, Wei Dai, Hui Hwang Goh, Dongdong Zhang, Feng Shuang, Thomas Wu, Xianhao Fan</div>
           <div class="p-foot">
             <div class="p-venue"><span class="vchip" title="SSRN preprint 3720780">SSRN 2020</span></div>
-            <div class="p-links"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3720780" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Paper</a></div>
+            <div class="p-links"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3720780" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="i-en">Paper</span><span class="i-zh">论文</span></a></div>
           </div>
         </li>
       </ul>
-      <p class="marks">† equal contribution · * corresponding author</p>
-      <p class="empty" id="empty" hidden>No papers in this category yet.</p>
+      <p class="marks"><span class="i-en">† equal contribution · * corresponding author</span><span class="i-zh">† 共同第一作者 · * 通讯作者</span></p>
+      <p class="empty" id="empty" hidden><span class="i-en">No papers in this category yet.</span><span class="i-zh">该分类下暂无论文。</span></p>
     </section>
 
     <!-- ── Talks ── -->
     <section id="talks">
-      <h2>Invited Talks</h2>
+      <h2><span class="i-en">Invited Talks</span><span class="i-zh">特邀报告</span></h2>
       <div class="talk">
         <div class="talk-t">The Next Era of Medicine: AI-Driven Transformation</div>
         <div class="talk-m">
-          Invited Speaker · Asian Transplantation Week (ATW) 2026 &amp; Transplantation Science Symposium (TSS) in Asia 2026<br>
+          <span class="i-en">Invited Speaker · Asian Transplantation Week (ATW) 2026 &amp; Transplantation Science Symposium (TSS) in Asia 2026<br>
           TSS Concurrent Symposium 7 (Kidney) — Foundation Models and Clinical Intelligence in Transplantation<br>
-          Nov 14, 2026 · BEXCO, Busan, Korea
+          Nov 14, 2026 · BEXCO, Busan, Korea</span>
+          <span class="i-zh">特邀讲者 · 2026 亚洲移植周（ATW）暨亚洲移植科学研讨会（TSS）<br>
+          TSS 分会场 7（肾脏）— 移植领域的基础模型与临床智能<br>
+          2026 年 11 月 14 日 · 韩国釜山 BEXCO 会展中心</span>
         </div>
       </div>
     </section>
 
     <!-- ── Service ── -->
     <section id="service">
-      <h2>Professional Activities</h2>
-      <h3>Reviewer for Conferences</h3>
+      <h2><span class="i-en">Professional Activities</span><span class="i-zh">学术服务</span></h2>
+      <h3><span class="i-en">Reviewer for Conferences</span><span class="i-zh">会议审稿人</span></h3>
       <ul class="plain">
         <li>AAAI Conference on Artificial Intelligence (AAAI), <span class="y">2024, 2025, 2026</span></li>
         <li>ACM SIGKDD Conference on Knowledge Discovery and Data Mining (SIGKDD), <span class="y">2025, 2026</span></li>
@@ -584,40 +595,45 @@
 
     <!-- ── Honors ── -->
     <section id="honors">
-      <h2>Honors &amp; Awards</h2>
-      <h3>Competitions</h3>
+      <h2><span class="i-en">Honors &amp; Awards</span><span class="i-zh">荣誉奖项</span></h2>
+      <h3><span class="i-en">Competitions</span><span class="i-zh">学科竞赛奖励</span></h3>
       <ul class="plain">
-        <li><span class="y">2025</span> · Computer Achievement Award, Guangxi Zhuang Autonomous Region — <span class="prize">Second Prize</span></li>
-        <li><span class="y">2024</span> · 11th National Parallel Application Challenge, Team Leader — <span class="prize">National Second Prize (Top-2 in China)</span></li>
-        <li><span class="y">2024</span> · Tianjin "Challenge Cup" Innovation and Entrepreneurship Plan, Technical Director — <span class="prize">Gold Prize (Top-1 in Tianjin)</span></li>
-        <li><span class="y">2024</span> · Nankai University "President's Cup" Innovation and Entrepreneurship Competition, Technical Director — <span class="prize">First Prize</span></li>
-        <li><span class="y">2023</span> · "Huawei Cup" National College Student Storage Modeling Competition — <span class="prize">Second Prize (Top-2 in China)</span></li>
-        <li><span class="y">2020</span> · 8th National Parallel Application Challenge "Intel Cup" — <span class="prize">Parallel Fund Award (Top-9 in China)</span></li>
-        <li><span class="y">2020</span> · Guangxi College Student Computer Design Competition — <span class="prize">Third Prize</span></li>
-        <li><span class="y">2019</span> · Guangxi Computer Society Conference — <span class="prize">First Prize, Outstanding Paper</span></li>
-        <li><span class="y">2017</span> · "Data Creation Cup" National Mathematical Modeling Challenge — <span class="prize">First Prize</span></li>
+        <li><span class="y">2026</span> · <span class="i-en">3rd "Huawei Cup" National College Student Storage Modeling Competition, Team Leader — <span class="prize">Second Prize</span></span><span class="i-zh">“华为杯”第三届全国大学生存储建模比赛（队长）— <span class="prize">二等奖</span></span></li>
+        <li><span class="y">2025</span> · <span class="i-en">Computer Achievement Award of Guangxi Zhuang Autonomous Region, Main Contributor — <span class="prize">Second Prize</span></span><span class="i-zh">广西壮族自治区计算机成果奖（主要参与）— <span class="prize">二等奖</span></span></li>
+        <li><span class="y">2024</span> · <span class="i-en">11th National Parallel Application Challenge, Team Leader — <span class="prize">National Second Prize</span></span><span class="i-zh">第十一届全国并行应用挑战赛（队长）— <span class="prize">全国二等奖</span></span></li>
+        <li><span class="y">2024</span> · <span class="i-en">Tianjin "Challenge Cup" Innovation and Entrepreneurship Plan, Technical Director — <span class="prize">Gold Prize</span></span><span class="i-zh">天津市“挑战杯”创新创业计划（技术总监）— <span class="prize">金奖</span></span></li>
+        <li><span class="y">2024</span> · <span class="i-en">Nankai University "President's Cup" Innovation and Entrepreneurship Competition, Technical Director — <span class="prize">First Prize</span></span><span class="i-zh">南开大学“校长杯”创新创业大赛（技术总监）— <span class="prize">一等奖</span></span></li>
+        <li><span class="y">2023</span> · <span class="i-en">"Huawei Cup" National College Student Storage Modeling Competition, Team Leader — <span class="prize">Second Prize</span></span><span class="i-zh">“华为杯”全国大学生存储建模比赛（队长）— <span class="prize">二等奖</span></span></li>
+        <li><span class="y">2020</span> · <span class="i-en">8th National Parallel Application Challenge "Intel Cup", Team Leader — <span class="prize">Parallel Fund Award (National Top 9)</span></span><span class="i-zh">“英特尔杯”第八届全国并行应用挑战赛（队长）— <span class="prize">并行基金奖（全国 9 强）</span></span></li>
+        <li><span class="y">2020</span> · <span class="i-en">Guangxi College Student Computer Design Competition, Team Leader — <span class="prize">Third Prize</span></span><span class="i-zh">广西大学生计算机设计大赛（队长）— <span class="prize">三等奖</span></span></li>
+        <li><span class="y">2019</span> · <span class="i-en">Guangxi Computer Society Outstanding Conference Paper, First Author — <span class="prize">First Prize</span></span><span class="i-zh">广西计算机学会优秀会议论文（第一作者）— <span class="prize">一等奖</span></span></li>
+        <li><span class="y">2017</span> · <span class="i-en">"Shuchuang Cup" National College Student Mathematical Modeling Competition, Team Leader — <span class="prize">First Prize</span></span><span class="i-zh">“数创杯”全国大学生数学建模比赛（队长）— <span class="prize">一等奖</span></span></li>
       </ul>
-      <h3>Scholarships</h3>
+      <h3><span class="i-en">Honors &amp; Scholarships</span><span class="i-zh">荣誉表彰</span></h3>
       <ul class="plain">
-        <li><span class="y">2024–25</span> · First Prize Doctoral Graduate Scholarship, Nankai University</li>
-        <li><span class="y">2022–24</span> · Doctoral Graduate "GongNeng" Scholarship, Nankai University (twice)</li>
-        <li><span class="y">2021–22</span> · Outstanding Graduate Student; Annual Outstanding Student Scholarship, Guangxi University</li>
-        <li><span class="y">2020–22</span> · First Prize Graduate Academic Scholarship, Guangxi University (twice)</li>
-        <li><span class="y">2019–20</span> · Outstanding Graduate Cadre, Guangxi University</li>
-        <li><span class="y">2017–18</span> · National Inspirational Scholarship of China</li>
+        <li><span class="y">2026</span> · <span class="i-en">Outstanding Doctoral Graduate, Nankai University</span><span class="i-zh">南开大学优秀博士毕业生</span></li>
+        <li><span class="y">2025–26</span> · <span class="i-en">Stars of Tomorrow Intern, Microsoft Research Asia</span><span class="i-zh">微软亚洲研究院明日之星实习生（Stars of Tomorrow）</span></li>
+        <li><span class="y">2024–25</span> · <span class="i-en">CSC Government-Sponsored Study Abroad Scholarship, China Scholarship Council</span><span class="i-zh">CSC 国家公派留学奖学金，国家留学基金管理委员会</span></li>
+        <li><span class="y">2024–25</span> · <span class="i-en">National Scholarship for Doctoral Students, Ministry of Education &amp; Ministry of Finance</span><span class="i-zh">博士研究生国家奖学金，教育部和财政部</span></li>
+        <li><span class="y">2023–25</span> · <span class="i-en">First Prize of "GongNeng" Scholarship for Doctoral Students, Nankai University (twice)</span><span class="i-zh">南开大学博士研究生“公能”奖学金一等奖（两次）</span></li>
+        <li><span class="y">2021–22</span> · <span class="i-en">Outstanding Graduate, Guangxi University</span><span class="i-zh">广西大学优秀研究生毕业生</span></li>
+        <li><span class="y">2020–21</span> · <span class="i-en">Annual Outstanding Student Scholarship, Guangxi University</span><span class="i-zh">广西大学年度优秀学生奖学金</span></li>
+        <li><span class="y">2020–22</span> · <span class="i-en">First Prize Graduate Scholarship, Guangxi University (twice)</span><span class="i-zh">广西大学研究生奖学金一等奖（两次）</span></li>
+        <li><span class="y">2019–20</span> · <span class="i-en">Outstanding Student Cadre, Guangxi University</span><span class="i-zh">广西大学优秀学生干部</span></li>
+        <li><span class="y">2017–18</span> · <span class="i-en">National Inspirational Scholarship, China University of Mining and Technology</span><span class="i-zh">国家励志奖学金，中国矿业大学</span></li>
       </ul>
-      <h3>Patents &amp; Software Copyrights</h3>
+      <h3><span class="i-en">Patents &amp; Software Copyrights</span><span class="i-zh">发明专利与软件著作权</span></h3>
       <ul class="plain">
-        <li>A Heuristic Layout and Routing Method for Circuit Schematic Diagrams <span class="y">· CN117057302A · 2nd</span></li>
-        <li>Method for Evaluating the Aesthetics Level of Circuit Layout, Routing, and Schematic Diagram <span class="y">· CN117058096A · 2nd</span></li>
-        <li>A Parallel Optimization Method for High-Throughput Genomics Sequencing Reads Data Compression <span class="y">· CN117059181A · 2nd</span></li>
-        <li>A Parallel Compression Method for High-Throughput Genomic Sequencing Quality Score Data <span class="y">· CN117133365A · 2nd</span></li>
-        <li>A Non-Intrusive Identification Method for Multi-Parameter Identification of Electromagnetic Equipment Based on Ensemble Algorithms <span class="y">· CN113723495A · 3rd</span></li>
-        <li>Software copyrights: Research Integrity Evaluation Software System (2nd), DNA Sensitive Sequence Filtering Software (1st), Improved RC4 Cryptography Auxiliary Teaching Platform (1st)</li>
+        <li><span class="i-en">Method for Evaluating the Aesthetics Level of Circuit Layout, Routing, and Schematic Diagram <span class="y">· CN117058096A · 2023 · 1st student inventor</span></span><span class="i-zh">一种电路布局布线原理图美观度等级评价方法 <span class="y">· CN117058096A · 2023 · 学生第一发明人</span></span></li>
+        <li><span class="i-en">A Heuristic Layout and Routing Method for Circuit Schematic Diagrams <span class="y">· CN117057302A · 2023 · 1st student inventor</span></span><span class="i-zh">一种电路原理图启发式布局布线方法 <span class="y">· CN117057302A · 2023 · 学生第一发明人</span></span></li>
+        <li><span class="i-en">A Non-Intrusive Identification Method for Multi-Parameter Identification of Electromagnetic Equipment Based on Ensemble Algorithms <span class="y">· CN113723495A · 2023 · 2nd student inventor</span></span><span class="i-zh">一种基于集成算法的电磁装备多参数非侵入式辨识方法、系统、设备及存储介质 <span class="y">· CN113723495A · 2023 · 学生第二发明人</span></span></li>
+        <li><span class="i-en">A Parallel Optimization Method for High-Throughput Genomics Sequencing Reads Data Compression <span class="y">· CN117059181A · 2022 · 1st student inventor</span></span><span class="i-zh">一种高通量基因组序列数据压缩并行优化方法 <span class="y">· CN117059181A · 2022 · 学生第一发明人</span></span></li>
+        <li><span class="i-en">A Parallel Compression Method for High-Throughput Genomic Sequencing Quality Score Data <span class="y">· CN117133365A · 2022 · 1st student inventor</span></span><span class="i-zh">一种高通量基因组测序质量得分数据并行压缩方法 <span class="y">· CN117133365A · 2022 · 学生第一发明人</span></span></li>
+        <li><span class="i-en">Software copyrights: Research Integrity Evaluation Software System (2nd), DNA Sensitive Sequence Filtering Software (1st), Improved RC4 Cryptography Auxiliary Teaching Platform (1st)</span><span class="i-zh">软件著作权：科研诚信评价软件系统（第二）、DNA 敏感序列过滤软件（第一）、改进 RC4 密码辅助教学平台（第一）</span></li>
       </ul>
     </section>
 
-    <footer>© 2026 Sun Hui · Last updated Oct 2026</footer>
+    <footer><span class="i-en">© 2026 Sun Hui · Last updated Nov 2026</span><span class="i-zh">© 2026 孙辉 · 最后更新于 2026 年 11 月</span></footer>
   <div class="lightbox" id="lightbox" hidden><img alt="Framework figure"></div>
   </main>
 </div>
@@ -650,9 +666,11 @@
     document.getElementById('empty').hidden=shown>0;
     // Thumbnails only in the Selected view; category views stay a compact list
     list.classList.toggle('compact',!!topic);
-    var cur=document.querySelector('.chip[data-topic="'+topic+'"]');
-    hint.innerHTML=topic?'<b>'+cur.firstChild.textContent+'</b> · '+shown+' of '+papers.length+' papers'
-      :'Showing <b>CCF-A papers</b> and <b>industry tech reports</b> · pick a category to see all&nbsp;'+papers.length;
+    var zh=document.documentElement.dataset.lang==='zh';
+    var label=document.querySelector('.chip[data-topic="'+topic+'"] '+(zh?'.i-zh':'.i-en')).textContent;
+    hint.innerHTML=zh
+      ?(topic?'<b>'+label+'</b> · 共 '+shown+' / '+papers.length+' 篇':'显示 <b>CCF-A 论文</b>和<b>企业技术报告</b> · 选择分类可查看全部&nbsp;'+papers.length+'&nbsp;篇')
+      :(topic?'<b>'+label+'</b> · '+shown+' of '+papers.length+' papers':'Showing <b>CCF-A papers</b> and <b>industry tech reports</b> · pick a category to see all&nbsp;'+papers.length);
     toggle.setAttribute('aria-pressed',String(firstOnly));
     chips.forEach(function(c){c.setAttribute('aria-pressed',String(c.dataset.topic===topic))});
   }
@@ -688,6 +706,15 @@
   window.addEventListener('scroll',spy,{passive:true});spy();
   // Drop "Upcoming" labels once the date has passed
   document.querySelectorAll('.soon[data-until]').forEach(function(el){if(new Date()>=new Date(el.dataset.until))el.remove()});
+  // Language switch: English by default, choice remembered per browser
+  var titles={en:'Sun Hui (孙辉)',zh:'孙辉 - 个人主页'};
+  function setLang(l){
+    var h=document.documentElement;h.dataset.lang=l;h.lang=l==='zh'?'zh-CN':'en';document.title=titles[l];
+    try{localStorage.setItem('lang',l)}catch(e){}
+    apply();fitNews();
+  }
+  document.getElementById('lang-btn').addEventListener('click',function(){setLang(document.documentElement.dataset.lang==='zh'?'en':'zh')});
+  if(document.documentElement.dataset.lang==='zh')document.title=titles.zh;
   var lb=document.getElementById('lightbox');
   document.querySelectorAll('.p-thumb').forEach(function(a){a.addEventListener('click',function(e){
     e.preventDefault(); lb.querySelector('img').src=a.getAttribute('href'); lb.hidden=false;
